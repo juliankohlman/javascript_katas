@@ -8,5 +8,8 @@
 // difference between the youngest and oldest age].
 
 function differenceInAges(ages) {
-  // body...
+  let max = Math.max(...ages),
+      min = Math.min(...ages)
+      diff = max - min
+  return [min, max, diff]
 }
