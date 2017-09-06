@@ -12,3 +12,8 @@
 function oddOne(arr) {
   return arr.findIndex(function(x) { return Math.abs(x) % 2 === 1; });
 }
+
+// Using an arrow function
+// function oddOne(arr) {
+//   return arr.findIndex(x => x % 2 != 0);
+// }
