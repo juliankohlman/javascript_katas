@@ -7,9 +7,11 @@
 // an ascribed ‘age’ of 0. Return a new array with [youngest age, oldest age,
 // difference between the youngest and oldest age].
 
-function differenceInAges(ages) {
-  let max = Math.max(...ages),
-      min = Math.min(...ages)
-      diff = max - min
+function differenceInAges (ages) {
+  let max = Math.max(...ages)
+  let min = Math.min(...ages)
+  let diff = max - min
   return [min, max, diff]
 }
+
+differenceInAges([11, 80, 20, 33, 15])
