@@ -20,14 +20,14 @@
 // manipulation on the words. Here are a few examples of what your function
 // should do:
 
-function sentencify(words) {
-  var s = words.join(' ');
-  return s.replace(s.charAt(0), s.charAt(0).toUpperCase()) + '.';
+function sentencify (words) {
+  var s = words.join(' ')
+  return s.replace(s.charAt(0), s.charAt(0).toUpperCase()) + '.'
 }
 
 // Top CW solution
-function sentencify(words) {
-  return words.join(' ').replace(/^[a-z]/,m=>m.toUpperCase())+'.'
+function sentencify (words) {
+  return words.join(' ').replace(/^[a-z]/, m => m.toUpperCase()) + '.'
   // join words into string
   // replace the first letter
     // with its uppercase counterpart
