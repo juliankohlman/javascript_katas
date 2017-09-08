@@ -4,7 +4,7 @@
 
 // Detect the image files based on the end of the filename which is their format
 // (extension). Image files are defined as jpg, gif, png, tiff, svg and bmp. So
-// "puppies.jpg" is a image file while "puppies.html" is not.
+// 'puppies.jpg" is a image file while "puppies.html" is not.
 
 // For example: Input: ["imgName.extension", "notAnImg"] Output:
 // [["imgName.extension", "imgName", "extension"], null]
@@ -18,23 +18,26 @@
 function imageFilter (arr) {
   var imgExt = ['jpg', 'gif', 'png', 'tiff', 'svg', 'bmp'];
   var imageFiles = [];
-//   var formats = arr.map(function(file) {
-//     var fileInfo = file.toLowerCase().split('.');
-//     return imgExt.includes(fileInfo[1]) ? [file, fileInfo[0], fileInfo[1]] : null ;
-//   })
-//   return formats;
-  console.log(arr);
   arr.forEach(function (file) {
-    var fileInfo = file.toLowerCase().split('.');
-    if (fileInfo[0] === '') {
-      return imageFiles.push(null);
-    }
-    else if (imgExt.includes(file.toLowerCase().split('.')[fileInfo.length - 1])) {
-      return imageFiles.push([file, file.split('.')[0], file.split('.')[1]]);
+    var fileData = file.split('.')
+    if (!fileData[0]) { return imageFiles.push(null) }
+    if (imgExt.includes(fileData[fileData.length - 1].toLowerCase())) {
+      return imageFiles.push([file, fileData[0], fileData[1]])
     } else {
       return imageFiles.push(null);
     }
   });
-  console.log(imageFiles);
   return imageFiles;
 }
+
+
+// Top CW solution
+// function imageFilter(arr) {
+//   return arr.map(file => file.match(/^(.+)\.(bmp|gif|jpg|png|tiff)$/i))
+// }
+
+
+
+imageFilter(['favicon.gif', 'img.tiff'])
+imageFilter(['index.html', 'seattle.jpg'])
+imageFilter(['.bash_profile', 'workspace.doc', 'img0912.jpg'])
