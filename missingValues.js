@@ -23,16 +23,14 @@
 
 // The value of x * x * y
 
-
 var _ = require('lodash');
 
-function missingValues(arr) {
+function missingValues (arr) {
   var counts = _.invert(_.countBy(arr));
   var x = +counts[1]
   var y = +counts[2]
   return x * x * y;
 }
-
 
 // Top CW solution
 // const _ = require('lodash');
@@ -41,3 +39,11 @@ function missingValues(arr) {
 //   const xs = _(arr).countBy().invert().value();
 //   return xs[1] * xs[1] * xs[2];
 // }
+
+missingValues([1, 1, 1, 2, 2, 3]) // 18
+
+missingValues([6, 5, 4, 100, 6, 5, 4, 100, 6, 5, 4, 200]) // 4000000
+
+missingValues([27, 65, 44, 39, 44, 21, 21, 44, 65, 39, 21, 65]) // 28431
+
+missingValues([66, 4, 80, 66, 4, 83, 97, 81, 19, 4, 80, 51, 83, 81, 83, 66, 51, 80, 97, 81, 97]) // 18411
