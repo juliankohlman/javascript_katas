@@ -14,4 +14,4 @@ function differenceInAges (ages) {
   return [min, max, diff]
 }
 
-differenceInAges([11, 80, 20, 33, 15])
+console.log(differenceInAges([11, 80, 20, 33, 15]))
