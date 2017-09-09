@@ -32,6 +32,7 @@ function imageFilter (arr) {
 
 
 // Top CW solution
+// USING .match was the key here
 // function imageFilter(arr) {
 //   return arr.map(file => file.match(/^(.+)\.(bmp|gif|jpg|png|tiff)$/i))
 // }
