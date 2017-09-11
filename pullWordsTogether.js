@@ -26,8 +26,8 @@ function sentencify (words) {
 }
 
 // Top CW solution
-function sentencify (words) {
-  return words.join(' ').replace(/^[a-z]/, m => m.toUpperCase()) + '.'
+// function sentencify (words) {
+//   return words.join(' ').replace(/^[a-z]/, m => m.toUpperCase()) + '.'
   // join words into string
   // replace the first letter
     // with its uppercase counterpart
