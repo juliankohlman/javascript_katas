@@ -21,9 +21,11 @@
 
 function filterHomogenous (arrays) {
   function check (x) {
-    var first = x[0];
-    return x.every(function (i) { return typeof i === typeof first });
+    return x.every(function (i) { return typeof i === typeof x[0] });
   }
   var nonEmpty = arrays.filter((arr) => arr.length >= 1);
   return nonEmpty.filter(check);
 }
+
+// CW one-line
+// let filterHomogenous = a => a.filter(b => b.length > 0 && b.every(e => typeof e == typeof b[0]));
