@@ -13,7 +13,10 @@
 // fistBeard([[78], [117, 110, 99], [104, 117], [107, 115]] => 'Nunchuks'
 // fistBeard([[70, 97, 99], [101, 45, 75, 105, 99, 107]]) => 'Face-Kick'
 
-function fistBeard(arr) {
+function fistBeard (arr) {
   var charCodes = arr.reduce((a, b) => a.concat(b), []);
   return charCodes.map(c => String.fromCharCode(c)).join('');
 }
+
+// CW one-liner
+// const fistBeard = arr => String.fromCharCode(...[].concat(...arr));
