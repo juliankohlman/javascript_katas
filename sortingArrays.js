@@ -34,3 +34,12 @@ sortArray(a1, a2) // ['geko', 'octopus', 'iguana', 'eagle', 'rattlesnake']
 var a1 = ['jellyfish', 'koi', 'caribou', 'owl', 'dolphin'];
 var a2 = ['ostrich', 'jaguar', 'deer', 'camel', 'kangaroo'];
 sortArray(a1, a2) // ['jaguar', 'kangaroo', 'camel', 'ostrich', 'deer']
+
+// CW one-liner solution
+// const sortArray = (a1, a2) => a1.map( v => a2.find( w => v[0]===w[0] ) );
+
+// variation of solution above
+// function sortArray(a1, a2) {
+//   a1 = a1.map(e => e[0]).join('');
+//   return a2.sort((a,b) => a1.indexOf(a[0]) > a1.indexOf(b[0]));
+// }
