@@ -5,7 +5,7 @@
 // The geese are any strings in the following array, which is pre-populated in
 // your solution:
 
-// geese = ["African", "Roman Tufted", "Toulouse", "Pilgrim", "Steinbacher"] For
+// geese = ['African", "Roman Tufted", "Toulouse", "Pilgrim", "Steinbacher"] For
 // example, if this array were passed as an argument:
 
 // ["Mallard", "Hook Bill", "African", "Crested", "Pilgrim", "Toulouse", "Blue
@@ -15,9 +15,11 @@
 // returned array should be in the same order as in the initial array passed to
 // your function, albeit with the 'geese' removed. Note that all of the strings
 // will be in the same case as those provided, and some elements may be repeated.
+var birds = ["Mallard", "Barbary", "Hook Bill", "Blue Swedish", "Crested", "African", "Roman Tufted", "Toulouse", "Pilgrim", "Steinbacher"];
 
 function gooseFilter (birds) {
-  var geese = ["African", "Roman Tufted", "Toulouse", "Pilgrim", "Steinbacher"];
-
-  // return an array containing all of the strings in the input array except those that match strings in geese
+  var geese = ['African', 'Roman Tufted', 'Toulouse', 'Pilgrim', 'Steinbacher'];
+  return birds.filter(item => !geese.includes(item));
 };
+
+gooseFilter(birds);
