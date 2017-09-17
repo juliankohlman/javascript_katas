@@ -12,5 +12,5 @@ function isAllPossibilities (x) {
 
 }
 
-isAllPossibilities([0,1,2,3])
-isAllPossibilities([1,2,3,4])
+isAllPossibilities([0, 1, 2, 3])
+isAllPossibilities([1, 2, 3, 4])
