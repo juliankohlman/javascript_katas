@@ -12,4 +12,6 @@
 // arr.toDictionary(k=>k, v=> v*v) === {1:1, 2:4, 3:9, 4:16, 5:25};
 // arr.toDictionary(k=>k) === {1:1, 2:2, 3:3, 4:4, 5:5}; //
 
-Array.prototype.toDictionary = function (keyFn, valueFn) {}
+Array.prototype.toDictionary = function (keyFn, valueFn) {
+
+}

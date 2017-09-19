@@ -13,6 +13,6 @@
 // turtle hum
 // turtle ham
 
-function mutateMyStrings(stringOne, stringTwo){
+function mutateMyStrings (stringOne, stringTwo) {
 
 }
