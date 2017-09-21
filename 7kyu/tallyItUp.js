@@ -10,12 +10,11 @@
 // return an HTML string that I can insert into my website that represents the
 // correct score.
 
-var scoreToTally = function(score) {
-  console.log(score);
-  let scoreTally = { 1: 'a', 2: 'b', 3: 'c', 4: 'd', 5: 'e' };
-  if ( score < 5 ) return scoreTally[score];
-  if ( score % 5 === 0 ) return 'e <br>'.repeat(score / 5);
-  let lastTally = scoreTally[score % 5];
-  let completeTallys = score - (score % 5);
-  return 'e <br>'.repeat(completeTallys / 5) + lastTally;
+var scoreToTally = function (score) {
+  let scoreConversion = { 1: 'a', 2: 'b', 3: 'c', 4: 'd', 5: 'e' };
+  let lastTally = scoreConversion[score % 5];
+  let completedTallys = (score - (score % 5)) / 5;
+
+  if (score < 5) return scoreConversion[score];
+  return score % 5 === 0 ? 'e <br>'.repeat(score / 5) : 'e <br>'.repeat(completedTallys) + lastTally;
 }
