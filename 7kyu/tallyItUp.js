@@ -18,3 +18,13 @@ var scoreToTally = function (score) {
   if (score < 5) return scoreConversion[score];
   return score % 5 === 0 ? 'e <br>'.repeat(score / 5) : 'e <br>'.repeat(completedTallys) + lastTally;
 }
+
+// CW solutions
+
+// scoreToTally = score => 'e <br>'.repeat((score / 5) | 0) + ['', 'a', 'b', 'c', 'd'][score % 5];
+
+// var scoreToTally = function(score){
+//   var s = "";
+//   for(var i = 0;i < Math.floor(score / 5);i++){s += "e <br>";}
+//   return s + ['','a','b','c','d'][score % 5]
+// }
