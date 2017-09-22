@@ -13,7 +13,7 @@
 var scoreToTally = function (score) {
   let scoreConversion = { 1: 'a', 2: 'b', 3: 'c', 4: 'd', 5: 'e' };
   let lastTally = scoreConversion[score % 5];
-  let completedTallys = (score - (score % 5)) / 5;
+  let completedTallys = Math.floor(score / 5);
 
   if (score < 5) return scoreConversion[score];
   return score % 5 === 0 ? 'e <br>'.repeat(score / 5) : 'e <br>'.repeat(completedTallys) + lastTally;

@@ -16,3 +16,5 @@
 function mutateMyStrings (stringOne, stringTwo) {
 
 }
+
+mutateMyStrings('bubble gum', 'turtle ham'); //'bubble gum\ntubble gum\nturble gum\nturtle gum\nturtle hum\nturtle ham\n'
