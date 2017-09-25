@@ -26,9 +26,9 @@
 var _ = require('lodash');
 
 function missingValues (arr) {
-  var counts = _.invert(_.countBy(arr));
-  var x = +counts[1]
-  var y = +counts[2]
+  let counts = _.invert(_.countBy(arr));
+  let x = +counts[1]
+  let y = +counts[2]
   return x * x * y;
 }
 
