@@ -15,6 +15,8 @@
 
 function mutateMyStrings (stringOne, stringTwo) {
   // stub / pseudocode plan here (SOLVE IT ON PAPER FIRST)
+  // set stringOne[i] = stringTwo[i]
+  // increment and build up string
 }
 
 mutateMyStrings('bubble gum', 'turtle ham');
