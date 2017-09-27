@@ -23,7 +23,7 @@ function filterHomogenous (arrays) {
   function check (x) {
     return x.every(function (i) { return typeof i === typeof x[0] });
   }
-  var nonEmpty = arrays.filter((arr) => arr.length >= 1);
+  let nonEmpty = arrays.filter((arr) => arr.length >= 1);
   return nonEmpty.filter(check);
 }
 
