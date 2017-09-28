@@ -14,9 +14,11 @@
 // turtle ham
 
 function mutateMyStrings (stringOne, stringTwo) {
-  // stub / pseudocode plan here (SOLVE IT ON PAPER FIRST)
-  // set stringOne[i] = stringTwo[i]
-  // increment and build up string
+  const res = [s1];
+  for (let i = 0; i < s2.length; i++) {
+    res.push(s2.substring(0,i+1) + s1.slice(i+1));
+  }
+  return Array.from(new Set(res)).join('\n') + '\n';
 }
 
 mutateMyStrings('bubble gum', 'turtle ham');
