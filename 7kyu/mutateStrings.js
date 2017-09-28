@@ -14,9 +14,9 @@
 // turtle ham
 
 function mutateMyStrings (stringOne, stringTwo) {
-  const res = [s1];
-  for (let i = 0; i < s2.length; i++) {
-    res.push(s2.substring(0,i+1) + s1.slice(i+1));
+  const res = [stringOne];
+  for (let i = 0; i < stringTwo.length; i++) {
+    res.push(stringTwo.substring(0, i + 1) + stringOne.slice(i + 1));
   }
   return Array.from(new Set(res)).join('\n') + '\n';
 }
