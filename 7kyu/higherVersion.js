@@ -37,6 +37,13 @@ function higherVersion(ver1, ver2) {
   }
 }
 
+// CW solution
+// function higherVersion(ver1, ver2) {
+//   if (ver1 === ver2) return false;
+//   let [a1, a2] = [ver1.split('.'), ver2.split('.')];
+//   for (let i in a1) if (a1[i] !== a2[i]) return +a1[i] > +a2[i];
+// }
+
 higherVersion("1.2.2", "1.2.0") // true
 
 higherVersion("1.0.5", "1.1.0")  // false
