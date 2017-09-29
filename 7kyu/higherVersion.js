@@ -26,5 +26,31 @@
 // [output] a boolean value
 
 function higherVersion(ver1, ver2) {
-  // solve it on paper first
+  if (ver1 === ver2) return false;
+
+  let v1 = ver1.split('.').map(x => +x);
+  let v2 = ver2.split('.').map(x => +x);
+
+  for (let i = 0; i < v1.length; i++) {
+    if (v1[i] === v2[i]) continue;
+    return v1[i] > v2[i];
+  }
 }
+
+higherVersion("1.2.2", "1.2.0") // true
+
+higherVersion("1.0.5", "1.1.0")  // false
+
+higherVersion("1.1.0", "1.1.5") // false
+
+higherVersion("10", "9") // true
+
+higherVersion("1.0.10", "1.1.5") // false
+
+higherVersion("1.1.10", "1.2.0") // false
+
+higherVersion("1.2.2", "1.2.10") // false
+
+higherVersion("1.10.2", "1.2.10") // true
+
+higherVersion("4.3.22.1", "4.3.22.1") // false
