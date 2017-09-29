@@ -20,11 +20,10 @@
 // illegal and should be filtered out.
 
 function filterHomogenous (arrays) {
-  function check (x) {
-    return x.every(function (i) { return typeof i === typeof x[0] });
-  }
-  let nonEmpty = arrays.filter((arr) => arr.length >= 1);
-  return nonEmpty.filter(check);
+  return arrays.filter(function (arr) {
+    const first = arr[0];
+    return arr.length > 0 && arr.every(x => typeof x === typeof first);
+  });
 }
 
 // CW one-line
