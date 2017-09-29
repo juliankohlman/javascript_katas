@@ -12,5 +12,17 @@
 // dbU30)
 
 function changer(str) {
-  // body...
+  // body...  let chars = str.split('').map( function(i) {
+  //   if (i.match(/z/i)) {
+  //     return 97;
+  //   } else if (i.match(/\d/)) {
+  //     return i;
+  //   } else {
+  //     return i.charCodeAt();
+  //   }
+  // });
+
+  // return chars.map( function(n) {
+  //   if (n === 97) return
+  // });
 }
