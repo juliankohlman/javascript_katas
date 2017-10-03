@@ -13,6 +13,11 @@ function moveVowel (input) {
   return nonVowel.concat(vowels).join('');
 }
 
+// CW solution
+// function moveVowel(s) {
+//   return (k='',s=s.replace(/[aeuoi]/g,m=>(k+=m,'')),s+k)
+// }
+
 moveVowel('day') // dya
 moveVowel('apple') // pplae
 moveVowel('peace') // pceae
