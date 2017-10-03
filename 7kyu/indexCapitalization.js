@@ -17,6 +17,12 @@ function capitalize (s, arr) {
   return result;
 };
 
+// Cw solutions
+// const capitalize = (string, array) =>
+//   string.replace(/./g, (char, index) =>
+//   array.includes(index) ? char.toUpperCase() : char
+// );
+
 capitalize('abcdef', [1, 2, 5]) // 'aBCdeF'
 capitalize('abcdef', [1, 2, 5, 100]) // 'aBCdeF'
 capitalize('codewars', [1, 3, 5, 50]) // 'cOdEwArs'
