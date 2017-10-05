@@ -15,5 +15,18 @@
 // max could be really big.
 
 function sumTimesTables(tables, min, max){
-  //your code here
+  const range = [];
+  const products = [];
+  for (min; min <= max; min++) {
+    range.push(min)
+  }
+//   let products = tables.map( i => range.map( n => i * n)).map( arr => arr.reduce((a,b) => a + b,0)).reduce((a,b) => a + b,0);
+//   return products
+  for (let i = 0; i < range.length; i++) {
+    for (let j = 0; j < tables.length; j++) {
+      products.push( tables[j] * range[i] );
+    }
+  }
+  console.log(products);
+//   return products.reduce( (acc, cur) => acc + cur,0);
 }
