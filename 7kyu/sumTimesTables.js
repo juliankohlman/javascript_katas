@@ -27,6 +27,6 @@ function sumTimesTables(tables, min, max){
       products.push( tables[j] * range[i] );
     }
   }
-  console.log(products);
+
 //   return products.reduce( (acc, cur) => acc + cur,0);
 }
