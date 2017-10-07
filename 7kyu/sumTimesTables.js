@@ -14,7 +14,7 @@
 // min could be negative.
 // max could be really big.
 
-function sumTimesTables(tables, min, max){
+function sumTimesTables (tables, min, max) {
   const range = [];
   const products = [];
   for (min; min <= max; min++) {
