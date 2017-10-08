@@ -24,7 +24,7 @@ function sumTimesTables (tables, min, max) {
 //   return products
   for (let i = 0; i < range.length; i++) {
     for (let j = 0; j < tables.length; j++) {
-      products.push( tables[j] * range[i] );
+      products.push(tables[j] * range[i]);
     }
   }
 
