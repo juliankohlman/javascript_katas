@@ -12,16 +12,16 @@
 function solve (arr) {
   const alphabet = 'abcdefghijklmnopqrstuvwxyz'.split('');
 
-  return arr.map(function (string) {
+  return arr.map(i => i.toLowerCase()).map(function (string) {
     let syms = 0;
     for (let i = 0; i < string.length; i++) {
-      alphabet[i] === string[i].toLowerCase() ? syms++ : syms;
+      if (alphabet[i].match(string[i])) syms++
     }
     return syms;
   });
 };
 
-solve(['abode', 'ABc', 'xyzD']);
+console.log(solve(['abode', 'ABc', 'xyzD']));
 solve(['abide', 'ABc', 'xyz']);
 solve(['IAMDEFANDJKL', 'thedefgh', 'xyzDEFghijabc']);
 solve(['encode', 'abc', 'xyzD', 'ABmD']);
