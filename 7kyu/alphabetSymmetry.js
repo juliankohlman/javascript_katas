@@ -10,14 +10,15 @@
 // Input will consist of alphabet characters, both uppercase and lowercase. No spaces.
 
 function solve (arr) {
-  const alphabet = 'abcdefghijklmnopqrstuvwxyz'.split('');
+  const alphabet = 'abcdefghijklmnopqrstuvwxyz';
+  return arr.map(function (string) {
+    string = string.toLowerCase();
+    let sym = 0;
 
-  return arr.map(i => i.toLowerCase()).map(function (string) {
-    let syms = 0;
     for (let i = 0; i < string.length; i++) {
-      if (alphabet[i].match(string[i])) syms++
+      if (string[i].match(alphabet[i])) sym++
     }
-    return syms;
+    return sym;
   });
 };
 
