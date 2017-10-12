@@ -14,9 +14,18 @@ const notes = ["C", "C#", "D", "D#", "E", "F", "F#", "G", "G#", "A", "A#", "B"];
 
 function chords(root) {
   //your code here
-  let start = notes.indexOf(root);
-  console.log(start);
+  let rootIdx = notes.indexOf(root);
+  console.log(rootIdx);
   console.log(notes.length);
-
+  console.log(rootIdx + 4 >= notes.length)
+  let majorChord = [];
+  let minorChord = [];
+  let mid = 0;
+  if (rootIdx + 4 >= notes.length) {
+    mid = (rootIdx + 4) - notes.length;
+  } else {
+    mid = rootIdx + 4;
+  }
+  console.log(mid);
 //   return [majorChord, minorChord];
 }
