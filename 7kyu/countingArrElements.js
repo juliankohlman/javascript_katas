@@ -4,10 +4,12 @@
 // count(['james', 'james', 'john'])
 // #=> { 'james': 2, 'john': 1}
 
-function count(array){
-  let result = {};
-  for (element of array) {
-    result[element] = array.filter( i => i === element ).length
+function count (array) {
+  const result = {};
+  for (let element of array) {
+    result[element] = array.filter(i => i === element).length
   }
   return result;
 }
+
+count(['a', 'a', 'b', 'b', 'b']) // { 'a': 2, 'b': 3 }
