@@ -21,6 +21,14 @@ function chords (root) {
   return [ [root, notes[mid], notes[last]], [root, notes[midMin], notes[last]] ];
 }
 
+// CW solution great usage of mod operator
+// function chords(root) {
+//   const rootIndex = notes.indexOf(root);
+
+//   return [[root, notes[(rootIndex + 4) % 12], notes[(rootIndex + 7) % 12]],
+//           [root, notes[(rootIndex + 3) % 12], notes[(rootIndex + 7) % 12]]];
+// }
+
 chords('C') // [['C','E','G'],['C','D#','G']]
 chords('F') // [['F','A','C'],['F','G#','C']]
 chords('G') // [['G','B','D'],['G','A#','D']]
