@@ -10,22 +10,16 @@
 // The notes are C, C#, D, D#, E, F, F#, G, G#, A, A#, B –– you are given this as
 // a constant
 
-const notes = ["C", "C#", "D", "D#", "E", "F", "F#", "G", "G#", "A", "A#", "B"];
+const notes = ['C', 'C#', 'D', 'D#', 'E', 'F', 'F#', 'G', 'G#', 'A', 'A#', 'B'];
 
-function chords(root) {
-  //your code here
-  let rootIdx = notes.indexOf(root);
-  console.log(rootIdx);
-  console.log(notes.length);
-  console.log(rootIdx + 4 >= notes.length)
-  let majorChord = [];
-  let minorChord = [];
-  let mid = 0;
-  if (rootIdx + 4 >= notes.length) {
-    mid = (rootIdx + 4) - notes.length;
-  } else {
-    mid = rootIdx + 4;
-  }
-  console.log(mid);
-//   return [majorChord, minorChord];
+function chords (root) {
+  let rt = notes.indexOf(root);
+  let mid = rt + 4 >= notes.length ? (rt + 4) - notes.length : rt + 4;
+  let last = rt + 7 >= notes.length ? (rt + 7) - notes.length : rt + 7;
+
+  return [ [root, notes[mid], notes[last]], [root, notes[mid - 1], notes[last]] ];
 }
+
+chords('C') // [['C','E','G'],['C','D#','G']]
+chords('F') // [['F','A','C'],['F','G#','C']]
+chords('G') // [['G','B','D'],['G','A#','D']]
