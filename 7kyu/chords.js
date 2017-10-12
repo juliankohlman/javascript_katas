@@ -10,7 +10,7 @@
 // The notes are C, C#, D, D#, E, F, F#, G, G#, A, A#, B –– you are given this as
 // a constant
 
-const notes = ["C", "C#", "D", "D#", "E", "F", "F#", "G", "G#", "A", "A#", "B"];
+const notes = ['C', 'C#', 'D', 'D#', 'E', 'F', 'F#', 'G', 'G#', 'A', 'A#', 'B'];
 
 function chords (root) {
   let rt = notes.indexOf(root);
