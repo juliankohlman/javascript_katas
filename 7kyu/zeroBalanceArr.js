@@ -5,15 +5,15 @@
 // to zero.
 
 
-function ìsZeroBalanced(n){
+function ìsZeroBalanced (n) {
   console.log(n)
-  let pos = n.sort((a,b)=>a-b)
-  let a = pos.slice(0,pos.length / 2)
-  let b = pos.slice(pos.length/2)
+  let pos = n.sort((a, b) => a - b )
+  let a = pos.slice(0, pos.length / 2)
+  let b = pos.slice(pos.length / 2)
   console.log(a);
   console.log(b);
-  console.log(n.sort((a,b)=>a-b))
+  console.log(n.sort((a ,b) => a - b))
   if (n.length % 2 !== 0 || n.length < 1) return false
-  return a.reduce((a,b) => a + b) + b.reduce((a,b) => a + b) === 0
+  return a.reduce((a, b) => a + b) + b.reduce((a, b) => a + b) === 0
 //   return a.every(x => b.includes(-x))
 }
