@@ -5,4 +5,6 @@
 
 // #Restriction: code length <= 26 characters
 
-weirdHexToDec=x=>+('0x'+x)
+weirdHexToDec=x=>+`0x${x}`
+
+weirdHexToDec('FF')
