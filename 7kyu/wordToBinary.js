@@ -12,6 +12,10 @@ function wordToBin (str) {
   return res;
 }
 
+// function wordToBin(str) {
+//   return Array.from(str, c => "0" + c.charCodeAt(0).toString(2))
+// }
+
 wordToBin('man') // [ '01101101', '01100001', '01101110' ]
 wordToBin('AB') // ['01000001', '01000010']
 wordToBin('wecking') // [ '01110111', '01100101', '01100011', '01101011', '01101001', '01101110', '01100111' ]
