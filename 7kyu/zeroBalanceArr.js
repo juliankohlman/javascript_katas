@@ -6,7 +6,7 @@
 
 
 function ìsZeroBalanced (n) {
-  console.log(n);
+
 //   console.log(n.filter(i => i > 0))
 //   console.log(n.filter(i => i < 0))
   let i = n.filter(n => n === 0)
