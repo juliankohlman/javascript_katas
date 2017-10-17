@@ -17,5 +17,9 @@ function sumArr (a, b) {
   return result.map(i => i.toString());
 }
 
+// function sumArr(a,b) {
+//   return a.map((x,i)=>+x + +b[i]+'');
+// }
+
 sumArr(['4', '5', '6', '7', '8'], ['1', '2', '3', '4', '5'])
 sumArr(['34', '5', '200', '17', '6'], ['27', '24', '14', '90', '16'])
