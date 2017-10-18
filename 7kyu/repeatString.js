@@ -13,6 +13,11 @@ function hasOneChar (s) {
   return s[0].repeat(s.length) === s;
 }
 
+// Regex solution from Codewars
+// function hasOneChar(s) {
+//   return /^(.)\1*$/.test(s);
+// }
+
 hasOneChar('a')
 hasOneChar('aaaaa')
 hasOneChar('aaaab')
