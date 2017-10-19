@@ -7,7 +7,7 @@
 // Output : "HEllO WOrld!"
 
 function swap (st) {
-  return st.replace(/[aeiou]/gi, function (l) { return l.toUpperCase() });
+  return st.replace(/[aeiou]/g, function (l) { return l.toUpperCase() });
 }
 
 swap('HelloWorld!')
