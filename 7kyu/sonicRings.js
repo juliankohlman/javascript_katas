@@ -17,14 +17,23 @@ function ringBank (rings, monitors, giantrings, chaosEmeralds, sonicHit, sonicSh
   if (sonicHit && sonicShield === false) return 0;
 
   let enoughEmeralds = chaosEmeralds >= 7;
-  let giantBonus =  rings + (monitors * 10) + (giantrings * 50);
+  let giantBonus = rings + (monitors * 10) + (giantrings * 50);
+  let regBonus = rings + (monitors * 10);
 
-  if (sonicHit  && sonicShield) {
-    return enoughEmeralds ? giantBonus : rings + (monitors * 10);
+  if (sonicHit && sonicShield) {
+    return enoughEmeralds ? giantBonus : regBonus;
   } else {
-    return enoughEmeralds ? giantBonus : rings + (monitors * 10);
+    return enoughEmeralds ? giantBonus : regBonus;
   }
 }
+
+// Cw solutions
+
+// ringBank=(a,b,c,d,e,f)=>(a+b*10+c*50*(d>6))*(!(e&&!f))
+
+// function ringBank(rings, monitors, giantRings, chaosEmeralds, sonicHit, sonicShield) {
+//   return sonicHit && !sonicShield ? 0 : rings + monitors * 10 + (chaosEmeralds === 7 ? giantRings * 50 : 0)
+// }
 
 ringBank(1, 0, 0, 0, false, false)
 ringBank(0, 1, 0, 0, false, false)
