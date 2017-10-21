@@ -4,5 +4,14 @@
 
 function zeroPlentiful(arr){
   console.log(arr);
+  let sequence = arr.join('').split(/[^0]/).filter(i=>i.includes('0'));
+  return sequence.every(i => i.match(/0{4,}/)) ? sequence.length : 0
+//   console.log(sequence);
+//   console.log(
+//     sequence.filter(i=>i.includes('0'))
+//     .every(i => i.match(/0{4,}/)
+//     ));
+
+//   return sequence.filter(i => i.match(/0{4,}/g)).length;
   return 0;
 }
