@@ -22,21 +22,45 @@
 // Note You may assume each items/elements of an iterable will be of same type (
 // no [ 1, 2, "a", "foo", new Date()] )
 
+function min(xx){
+  let arr = Array.from(xx);
+  if (arr.length === 1) return arr[0];
+  if (typeof arr[0] === "string") {
+    return arr.sort()[0];
+  }
+  if (typeof arr[0] === "number") {
+//     return arr.sort(function(a,b) { return a - b})[0];
+//     return Math.min(...arr);
+    let min = null;
+    for (let i = 0; i < arr.length; i++) {
+      let item = arr[i];
+      if (min === null || min > item) min = item;
+    }
+    return min;
+  }
+  return arr.sort(function(a,b) {
+    return a.getFullYear() > b.getFullYear();
+  })[0];
 
-
-function max(xx){
-  console.log(Object.entries(xx))
-//   for (let item of xx) {
-//     console.log(typeof item);
-//   }
-//   console.log(Math.max(...xx));
-  return // max of xx
 }
 
-function min(xx){
-  for (let item of xx) {
-    console.log(typeof item);
+function max(xx){
+  let arr = Array.from(xx);
+  if (arr.length === 1) return arr[0];
+  if (typeof arr[0] === "string") {
+    return arr.sort()[arr.length - 1];
   }
-  console.log(Math.min(...xx));
-  return // min of xx
+  if (typeof arr[0] === "number") {
+    if (arr.length < 500) return arr.sort(function(a,b) { return a - b})[arr.length - 1];
+//     return Math.max(...arr);
+    let max = null;
+    for (let i = 0; i < arr.length; i++) {
+      let item = arr[i];
+      if (max === null || max < item) max = item;
+    }
+    return max;
+  }
+  return arr.sort(function(a,b) {
+    return a.getFullYear() < b.getFullYear()
+  })[0]
 }
