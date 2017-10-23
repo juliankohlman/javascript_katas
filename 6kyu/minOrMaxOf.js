@@ -22,15 +22,13 @@
 // Note You may assume each items/elements of an iterable will be of same type (
 // no [ 1, 2, "a", "foo", new Date()] )
 
-function min(xx){
+function min (xx) {
   let arr = Array.from(xx);
   if (arr.length === 1) return arr[0];
-  if (typeof arr[0] === "string") {
+  if (typeof arr[0] === 'string') {
     return arr.sort()[0];
   }
-  if (typeof arr[0] === "number") {
-//     return arr.sort(function(a,b) { return a - b})[0];
-//     return Math.min(...arr);
+  if (typeof arr[0] === 'number') {
     let min = null;
     for (let i = 0; i < arr.length; i++) {
       let item = arr[i];
@@ -38,21 +36,20 @@ function min(xx){
     }
     return min;
   }
-  return arr.sort(function(a,b) {
+  return arr.sort(function (a, b) {
     return a.getFullYear() > b.getFullYear();
   })[0];
-
 }
 
-function max(xx){
+function max (xx) {
+  // or let arr = [...xx]
   let arr = Array.from(xx);
   if (arr.length === 1) return arr[0];
-  if (typeof arr[0] === "string") {
+  if (typeof arr[0] === 'string') {
     return arr.sort()[arr.length - 1];
   }
-  if (typeof arr[0] === "number") {
-    if (arr.length < 500) return arr.sort(function(a,b) { return a - b})[arr.length - 1];
-//     return Math.max(...arr);
+  if (typeof arr[0] === 'number') {
+    if (arr.length < 500) return arr.sort(function (a, b) { return a - b })[arr.length - 1];
     let max = null;
     for (let i = 0; i < arr.length; i++) {
       let item = arr[i];
@@ -60,7 +57,19 @@ function max(xx){
     }
     return max;
   }
-  return arr.sort(function(a,b) {
+  return arr.sort(function (a, b) {
     return a.getFullYear() < b.getFullYear()
   })[0]
 }
+
+// Solution from codewars
+// function max(xx){
+//   return [...xx].reduce((a,b) => a > b ? a : b)
+// }
+
+// function min(xx){
+//   return [...xx].reduce((a,b) => a < b ? a : b)
+// }
+
+min([2, 5, 3, 1, 4])
+max([2, 5, 3, 1, 4])
