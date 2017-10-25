@@ -10,11 +10,13 @@
 // case. See test cases for more examples.
 
 function dup (s) {
-  return s.map(i => i.replace(/(.)\1+/g, m => m[0]));
+  // m[0] should  be '$1' which corresponds to each submatched string
+  // which means you don't even need the last arrow function m => m[0]
+  return s.map(i => i.replace(/(.)\1+/g, m => m[0])
 }
 
 // ES6
-// const dup = (s) => s.map(i => i.replace(/(.)\1+/g, m => m[0]));
+// const dup = (s) => s.map(i => i.replace(/(.)\1+/g, $1));
 
 
 dup(['ccooddddddewwwaaaaarrrrsssss', 'piccaninny', 'hubbubbubboo']) // ['codewars','picaniny','hubububo']);
