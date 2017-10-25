@@ -13,6 +13,10 @@ function dup (s) {
   return s.map(i => i.replace(/(.)\1+/g, m => m[0]));
 }
 
+// ES6
+// const dup = (s) => s.map(i => i.replace(/(.)\1+/g, m => m[0]));
+
+
 dup(['ccooddddddewwwaaaaarrrrsssss', 'piccaninny', 'hubbubbubboo']) // ['codewars','picaniny','hubububo']);
 dup(['abracadabra', 'allottee', 'assessee']) // ['abracadabra','alote','asese']);
 dup(['kelless', 'keenness']) // ['keles','kenes']);
