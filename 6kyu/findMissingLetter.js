@@ -13,6 +13,11 @@
 // ['O','Q','R','S'] -> 'P'
 // (Use the English alphabet with 26 letters!)
 
-function findMissingLetter (array) {
-  // SOLVE IT ON PAPER FIRST
+function findMissingLetter(array) {
+  let codes = array.map(i => i.charCodeAt());
+  let beforeMissing = codes.findIndex(function(item,index,arr) {
+    return arr[index + 1] !== arr[index] + 1;
+  });
+  return beforeMissing
+  // use splice
 }
