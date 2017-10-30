@@ -18,5 +18,10 @@ function toWeirdCase (string) {
   return splitString.map(arr => arr.map((elem, idx) => idx % 2 === 0 ? elem.toUpperCase() : elem.toLowerCase()).join('')).join(' ');
 }
 
+// CodeWars regex solution very cool
+// function toWeirdCase(string){
+//   return string.replace(/(\w{1,2})/g,(m)=>m[0].toUpperCase()+m.slice(1).toLowerCase())
+// }
+
 toWeirdCase('String');
 toWeirdCase('lazerhawk');
