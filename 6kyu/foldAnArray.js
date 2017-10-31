@@ -36,25 +36,17 @@
 
 function foldArray (array, runs) {
   let newArray = array.slice();
-  let middle = Math.ceil(newArray.length / 2);
-  let fold = newArray.splice(middle).reverse();
-
-  console.log(runs);
-  console.log(newArray)
-  console.log(fold)
-
+  let fold = newArray.splice(Math.ceil(newArray.length / 2)).reverse();
   let i = 0;
+
   for (let value of fold) {
     newArray[i] += value;
     i++
   }
   runs--
-  return runs === 0 ? newArray : foldArray(newArray,runs)
-//   console.log(runs);
-//   return newArray
-
+  return runs === 0 ? newArray : foldArray(newArray,runs);
 }
 
-foldArray([ 1, 2, 3, 4, 5 ], 1)
+console.log(foldArray([ 1, 2, 3, 4, 5 ], 1))
 foldArray([ 1, 2, 3, 4, 5 ], 2)
 foldArray([ 1, 2, 3, 4, 5 ], 3)
