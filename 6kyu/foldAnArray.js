@@ -32,7 +32,29 @@
 
 // The input array should not be modified!
 
-function foldArray(array, runs)
-{
-  return [ 0 ];
+// *NOTE could use array comprehensions for this in the future
+
+function foldArray (array, runs) {
+  let newArray = array.slice();
+  let middle = Math.ceil(newArray.length / 2);
+  let fold = newArray.splice(middle).reverse();
+
+  console.log(runs);
+  console.log(newArray)
+  console.log(fold)
+
+  let i = 0;
+  for (let value of fold) {
+    newArray[i] += value;
+    i++
+  }
+  runs--
+  return runs === 0 ? newArray : foldArray(newArray,runs)
+//   console.log(runs);
+//   return newArray
+
 }
+
+foldArray([ 1, 2, 3, 4, 5 ], 1)
+foldArray([ 1, 2, 3, 4, 5 ], 2)
+foldArray([ 1, 2, 3, 4, 5 ], 3)
