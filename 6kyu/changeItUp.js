@@ -12,13 +12,6 @@
 // dbU30)
 
 function changer(str) {
-  console.log(str);
-  let shifted = str.replace(/[^0-9zZ ]/g, n => String.fromCharCode(n.charCodeAt(n) + 1)).toLowerCase();
-  return shifted.replace(/[aeiou]/gi, n => n.toUpperCase()).replace(/z/gi, 'A');
-  let res = '';
-
-  return str.replace(/[a-z]/gi,m => String.fromCharCode(m.charCodeAt(m) + 1)
-        .toLowerCase())
-        .replace(/[aeiou]/gi, m => m.toUpperCase())
-        .replace(/[{[]/gi, 'A');
+  let res = str.replace(/[a-z]/gi, n => String.fromCharCode(n.charCodeAt(n) + 1)).toLowerCase();
+  return res.replace(/[aeiou]/gi, n => n.toUpperCase()).replace(/[{[]/gi, 'A');
 }
