@@ -38,12 +38,19 @@ function foldArray (array, runs) {
   let newArray = array.slice();
   let fold = newArray.splice(Math.ceil(newArray.length / 2)).reverse();
 
-  fold.forEach((item,index) => {
+  fold.forEach((item, index) => {
     newArray[index] += item;
   });
   runs--
   return runs === 0 ? newArray : foldArray(newArray,runs);
 }
+
+// CodeWars Solution
+// function foldArray(a, n) {
+//   const r = [], c = a.slice();
+//   while (c.length) r.push(c.pop() + (c.shift() || 0));
+//   return n - 1 ? foldArray(r, n - 1) : r;
+// }
 
 console.log(foldArray([ 1, 2, 3, 4, 5 ], 1))
 foldArray([ 1, 2, 3, 4, 5 ], 2)
