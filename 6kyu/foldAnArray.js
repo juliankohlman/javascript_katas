@@ -37,12 +37,10 @@
 function foldArray (array, runs) {
   let newArray = array.slice();
   let fold = newArray.splice(Math.ceil(newArray.length / 2)).reverse();
-  let i = 0;
 
-  for (let value of fold) {
-    newArray[i] += value;
-    i++
-  }
+  fold.forEach((item,index) => {
+    newArray[index] += item;
+  });
   runs--
   return runs === 0 ? newArray : foldArray(newArray,runs);
 }
