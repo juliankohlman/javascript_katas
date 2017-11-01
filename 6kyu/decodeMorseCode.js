@@ -37,5 +37,10 @@
 
 decodeMorse = function (morseCode) {
   let encodedChars = morseCode.trim().split('   ').map(i => i.split(' '));
-  let chars = encodedChars.map(i => i.map(j => MORSE_CODE[j]).join('')).join(' ');
+  return encodedChars.map(i => i.map(j => MORSE_CODE[j]).join('')).join(' ');
 }
+
+// Codewars solution
+// decodeMorse = function(morseCode){
+//   return morseCode.trim().split(' ').map(a => MORSE_CODE[a] || ' ').join('').replace(/\s+/g, ' ');
+// }
