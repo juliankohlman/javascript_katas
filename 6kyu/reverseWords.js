@@ -9,5 +9,10 @@
 // reverseWords "double  spaces" -- "elbuod  secaps"
 
 function reverseWords (str) {
-  return str.replace(/[a-z]+[.+]|[a-z]+/gi, m => m.split('').reverse().join(''));
+  return str.replace(/\w+[.+]|\w+/gi, m => m.split('').reverse().join(''));
 }
+
+reverseWords('The quick brown fox jumps over the lazy dog.') // 'ehT kciuq nworb xof spmuj revo eht yzal .god'
+reverseWords('apple') // 'elppa'
+reverseWords('a b c d') // 'a b c d'
+reverseWords('double  spaced  words') // 'elbuod  decaps  sdrow'
