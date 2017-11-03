@@ -16,22 +16,13 @@
 
 // It is guaranteed that the value can always be divided into given bills, and
 // there are no "tricky" edge cases.
-
-
 function minimumBillCount (value, availables) {
-  let bills = availables.sort((a,b) => b - a);
-//   return bills
   let billCount = 0;
-  bills.forEach((i) => {
-    if (i> value) return;
+  availables.sort((a, b) => b - a).forEach((i) => {
+    // if (i> value) return;
     billCount += Math.floor(value / i);
     value = value % i;
   })
-//   for (let i = 0; i < bills.length; i++) {
-//     if (bills[i] > value) continue;
-//     billCount += Math.floor(value / bills[i]);
-//     value = value % bills[i]
-//   }
   return billCount;
 }
 
