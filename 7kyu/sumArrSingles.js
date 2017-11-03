@@ -7,7 +7,9 @@
 
 // More examples in the test cases.
 
-function repeats (arr) {
-  let singles = arr.filter(x => arr.indexOf(x) === arr.lastIndexOf(x));
+function repeats(arr) {
+  const singles = arr.filter(x => arr.indexOf(x) === arr.lastIndexOf(x));
   return singles.reduce((a, b) => a + b);
 }
+
+repeats([4, 5, 7, 5, 4, 8]);

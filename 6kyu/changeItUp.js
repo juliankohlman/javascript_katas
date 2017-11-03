@@ -12,6 +12,8 @@
 // dbU30)
 
 function changer(str) {
-  let res = str.replace(/[a-z]/gi, n => String.fromCharCode(n.charCodeAt(n) + 1)).toLowerCase();
+  const res = str.replace(/[a-z]/gi, n => String.fromCharCode(n.charCodeAt(n) + 1)).toLowerCase();
   return res.replace(/[aeiou]/gi, n => n.toUpperCase()).replace(/[{[]/gi, 'A');
 }
+
+changer('starHustler');
