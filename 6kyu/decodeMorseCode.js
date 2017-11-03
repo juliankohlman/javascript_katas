@@ -35,12 +35,14 @@
 // an exception, please keep that in mind. This is mostly because otherwise the
 // engine would simply ignore the tests, resulting in a "valid" solution.
 
-decodeMorse = function (morseCode) {
-  let encodedChars = morseCode.trim().split('   ').map(i => i.split(' '));
+const decodeMorse = function (morseCode) {
+  const encodedChars = morseCode.trim().split('   ').map(i => i.split(' '));
   return encodedChars.map(i => i.map(j => MORSE_CODE[j]).join('')).join(' ');
-}
+};
 
 // Codewars solution
 // decodeMorse = function(morseCode){
-//   return morseCode.trim().split(' ').map(a => MORSE_CODE[a] || ' ').join('').replace(/\s+/g, ' ');
+// return morseCode.trim().split(' ').map(a => MORSE_CODE[a] || ' ').join('').replace(/\s+/g, ' ');
 // }
+
+decodeMorse('   .   . ');
