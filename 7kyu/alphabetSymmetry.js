@@ -9,20 +9,21 @@
 
 // Input will consist of alphabet characters, both uppercase and lowercase. No spaces.
 
-function solve (arr) {
+function solve(arr) {
   const alphabet = 'abcdefghijklmnopqrstuvwxyz';
-  return arr.map(function (string) {
-    string = string.toLowerCase();
+  const words = arr.map(i => i.toLowerCase().split(''));
+
+  return words.map((s) => {
     let sym = 0;
 
-    for (let i = 0; i < string.length; i++) {
-      if (string[i].match(alphabet[i])) sym++
-    }
+    s.forEach((letter, idx) => {
+      if (letter.match(alphabet[idx])) sym += 1;
+    });
     return sym;
   });
-};
+}
+
 
 console.log(solve(['abode', 'ABc', 'xyzD']));
-solve(['abide', 'ABc', 'xyz']);
-solve(['IAMDEFANDJKL', 'thedefgh', 'xyzDEFghijabc']);
-solve(['encode', 'abc', 'xyzD', 'ABmD']);
+console.log(solve(['IAMDEFANDJKL', 'thedefgh', 'xyzDEFghijabc']));
+console.log(solve(['encode', 'abc', 'xyzD', 'ABmD']));

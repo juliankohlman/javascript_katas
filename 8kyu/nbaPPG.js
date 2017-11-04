@@ -13,7 +13,7 @@
 // float. Follow your dreams!
 
 function pointsPer48(ppg, mpg) {
-  var per48 = (ppg / mpg) * 48;
+  const per48 = (ppg / mpg) * 48;
   // replace Number.parseFloat with + ...which is the unary operator
   // that converts its argument to a number
   return ppg === 0 ? 0 : Number.parseFloat(per48.toFixed(1));
@@ -25,3 +25,5 @@ function pointsPer48(ppg, mpg) {
 // function pointsPer48(ppg, mpg) {
 //   return +(ppg/mpg*48).toFixed(1)||0
 // }
+
+pointsPer48(12, 20);

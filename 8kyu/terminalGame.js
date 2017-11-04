@@ -8,7 +8,7 @@
 // damage  5
 // experience  0
 
-function Hero (name='Hero') {
+function Hero(name = 'Hero') {
   this.name = name;
   this.position = '00';
   this.health = 100;

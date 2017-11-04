@@ -7,9 +7,9 @@
 
 // The input will be a lowercase string with no spaces.
 
-function capitalize (s) {
+function capitalize(s) {
   const result = ['', ''];
-  for (let i = 0; i < s.length; i++) {
+  for (let i = 0; i < s.length; i += 1) {
     if (i % 2 === 0) {
       result[0] += s[i].toUpperCase();
       result[1] += s[i];
@@ -19,7 +19,7 @@ function capitalize (s) {
     }
   }
   return result;
-};
+}
 
 // CW solution
 // function capitalize(s){
