@@ -13,14 +13,17 @@
 // step. The first is minimum value, second is maximum of range and the third is
 // step.
 
-function generateRange (min, max, step) {
-  var res = [];
-  for (min; min <= max;) {
-    res.push(min);
-    min += step;
+function generateRange(min, max, step) {
+  const res = [];
+  let i = min;
+  for (i; i <= max; i += step) {
+    res.push(i);
   }
   return res;
 }
+
+console.log(generateRange(2, 10, 2));
+console.log(generateRange(1, 10, 3));
 
 // function generateRange(min, max, step){
 //   let arr = [];
