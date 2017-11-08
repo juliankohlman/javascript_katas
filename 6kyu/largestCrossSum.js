@@ -16,15 +16,16 @@
 // The matrix may not be square. All elements will be positive integers.
 
 function largestCrossSum(matrix) {
-  console.log(matrix)
-  const makeColumn = (arr, n) => arr.map(x => x[n]);
+  matrix.forEach(i => console.log(`${i}`))
+  const getMax = (arr) => arr.filter(i => i.reduce((a,b) => a + b) === Math.max(...arr.map(i => i.reduce((a,b) => a + b))))
   const longestRow = matrix.sort((a,b) => a.length - b.length)[0].length
   const cols = [];
-
-  for (let i = 0; i < longestRow; i += 1) {
-    cols.push(makeColumn(matrix,i));
+  for (let j = 0; j < longestRow; j += 1) {
+    cols.push(matrix.map((row) => row[j]))
   }
-  console.log(cols);
+  let maxRow = getMax(matrix);
+  let maxCol = getMax(cols) //.filter(i => maxRow.includes(i))
+  console.log(maxRow, maxCol)
 }
 
 const matrix1 = [[1, 2, 3],
