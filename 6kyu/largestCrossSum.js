@@ -17,4 +17,30 @@
 
 function largestCrossSum(matrix) {
   // your code here
+  return matrix;
 }
+
+const matrix1 = [[1, 2, 3],
+                 [4, 5, 6],
+                 [7, 8, 9]];
+
+largestCrossSum(matrix1); // 33
+
+const matrix2 = [[1, 2, 1],
+                 [2, 2, 2],
+                 [1, 2, 1]];
+
+largestCrossSum(matrix2); // 10
+
+const matrix3 = [[1, 2, 1, 1],
+                 [2, 2, 2, 2],
+                 [1, 2, 1, 1],
+                 [1, 2, 1, 1]];
+
+largestCrossSum(matrix3); // 14
+
+const matrix4 = [[1, 1, 1, 4, 1, 1, 1],
+                 [3, 3, 3, 3, 3, 3, 3],
+                 [1, 1, 1, 4, 1, 1, 1]];
+
+largestCrossSum(matrix4); // 29
