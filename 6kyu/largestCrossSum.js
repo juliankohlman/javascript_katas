@@ -16,17 +16,20 @@
 // The matrix may not be square. All elements will be positive integers.
 
 function largestCrossSum(matrix) {
-  matrix.forEach(i => console.log(`${i}`))
-  const getMax = (arr) => arr.filter(i => i.reduce((a,b) => a + b) === Math.max(...arr.map(i => i.reduce((a,b) => a + b))))[0]
-  const longestRow = matrix.sort((a,b) => a.length - b.length)[0].length
+  // matrix.forEach(i => console.log(`${i}`))
+  const getMax = arr => arr.filter(i => i.reduce((a, b) => a + b) === Math.max(...arr.map(j => j.reduce((a, b) => a + b))))[0];
+  const longestRow = matrix.sort((a, b) => a.length - b.length)[0].length;
   const cols = [];
   for (let j = 0; j < longestRow; j += 1) {
-    cols.push(matrix.map((row) => row[j]))
+    cols.push(matrix.map((row) => row[j]));
   }
   let maxRow = getMax(matrix);
-  let maxCol = getMax(cols) //.filter(i => maxRow.includes(i))
-  console.log(maxRow)
-  console.log(maxRow, maxCol)
+  let maxCol = getMax(cols);
+  let crossIndex = maxRow.findIndex(i => maxCol.includes(i));
+  console.log(maxRow[crossIndex]);
+  console.log(maxRow);
+  console.log(maxRow,maxCol);
+  return maxRow.reduce((a, b) => a + b) + maxCol.reduce((a, b) => a + b) - maxRow[crossIndex];
 }
 
 const matrix1 = [[1, 2, 3],
