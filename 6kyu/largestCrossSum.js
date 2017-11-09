@@ -16,6 +16,7 @@
 // The matrix may not be square. All elements will be positive integers.
 
 function largestCrossSum(matrix) {
+
   let longRow = matrix.sort((a,b) => a.length - b.length)[0].length
   let columns = [];
   for (let i = 0; i < longRow; i += 1) { columns.push(matrix.map(row => row[i]))}
@@ -23,11 +24,22 @@ function largestCrossSum(matrix) {
   const mtxSums = arr => arr.map(i => i.reduce((a,b)=> a + b))
   const rowSums = mtxSums(matrix)
   const colSums = mtxSums(columns)
-  console.log(mtxSums(columns))
+//   console.log(mtxSums(columns))
 
   let largestRow = matrix[rowSums.indexOf(Math.max(...rowSums))]
   let largestCol = columns[colSums.indexOf(Math.max(...colSums))]
+
+  if (largestRow.length >= largestCol.length) {
+    var cross = largestRow.find(x => largestCol.includes(x))
+    // remove from row
+    console.log(cross)
+  } else {
+    cross = largestCol.find(x => largestRow.includes(x))
+    console.log(cross)
+  }
+  matrix.forEach(i => console.log(`${i}`))
   console.log(largestRow, largestCol);
+  return largestRow.reduce((a,b)=> a + b) + largestCol.reduce((a,b)=> a + b) - cross
 }
 
 const matrix1 = [[1, 2, 3],
