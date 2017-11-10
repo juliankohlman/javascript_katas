@@ -11,11 +11,9 @@
 // the given arrays.
 
 function getLengthOfMissingArray(input) {
-  console.log(input)
-//   if (+input === 0) return 0;
-//   if (input.includes(null) || input.includes([])) return 0;
-  if (input.some(i => i === null || i.length === 0)) return 0;
-  const arrays = input.sort((a,b) => a.length - b.length).map(i => i.length) || 0;
-  return arrays.find((i,idx,col) => col[idx + 1] - col[idx] !== 1) + 1
-//   return input === null || [] ? 0 :
+  if (+input === 0 || input.some(i => i === null || i.length === 0)) return 0;
+  const arrays = input.sort((a, b) => a.length - b.length).map(i => i.length);
+  return arrays.find((i, idx, col) => col[idx + 1] - col[idx] !== 1) + 1;
 }
+
+getLengthOfMissingArray([[1, 2], [4, 5, 1, 1], [1], [5, 6, 7, 8, 9]]);
