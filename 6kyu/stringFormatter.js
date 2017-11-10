@@ -25,5 +25,5 @@ function StringFormatter(rules){
     if (len === 2 && 'remove' in rules && 'map' in rules) { return m(r(str)) }
     if (len === 2 && 'remove' in rules && 'filter' in rules) { return f(r(str)) }
     return len === 3 ? f(m(r(str))) : f(m(str));
-  }
-};
+  };
+}
