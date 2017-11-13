@@ -37,13 +37,15 @@
 
 function shapeTimesObjectIntoIterableArray(timesObject) {
   // hint but not really: use Array.prototype.reduce
-  const timesArray = [{open : '', close : '', days : []}];
+  console.log(timesObject);
+  if (timesObject === null || timesObject === undefined || timesObject === {}) return [];
+  if (Object.keys(timesObject).length === 0) return []
 
   for (let prop in timesObject) {
     console.log(prop)
     console.log(timesObject[prop])
-    console.log(timesObject[prop][0]['open'])
-    console.log(timesObject[prop][0]['close'])
+//     console.log(timesObject[prop][0]['open'])
+//     console.log(timesObject[prop][0]['close'])
   }
-
+  console.log(timesArray)
 }
