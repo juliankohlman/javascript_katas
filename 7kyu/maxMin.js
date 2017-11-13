@@ -19,3 +19,19 @@ function solve(arr){
   }
   return res
 };
+
+function solve(arr){
+//   let res = [];
+//   let a = arr.slice(0).sort((a,b)=> a < b)
+//   while (a.length > 0) {
+//     res.push(a.shift(),a.pop());
+//     if (a.length === 1) { res.push(a.shift())}
+//   }
+//   return res
+  arr.sort((a, b) => a-b);
+
+  for (var i = 0; i < arr.length; i+=2) {
+    arr.splice(i, 0, arr.pop());
+  }
+  return arr
+};
