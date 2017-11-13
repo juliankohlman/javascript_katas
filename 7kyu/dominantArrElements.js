@@ -6,11 +6,7 @@
 // appear.
 
 function solve(arr) {
-  return arr.filter(function(num, index, col) {
-    if (col.slice(index + 1).every(i => num > i)) {
-      return num;
-    }
-  });
+  return arr.filter((num, idx, col) => col.slice(idx + 1).every(i => num > i));
 }
 
 solve([16, 17, 14, 3, 14, 5, 2])//, [ 17, 14, 5, 2]);
