@@ -17,7 +17,7 @@ function solve(arr){
     res.push(sorted.shift(),sorted.pop());
     if (sorted.length === 1) { res.push(sorted.shift())}
   }
-  return res
+  return res;
 };
 
 function solve(arr){
