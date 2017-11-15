@@ -14,13 +14,12 @@
 String.prototype.toInteger = function() {
   console.log(this)
   if (this.startsWith('-')) return -+this.slice(1)
-//   if (this.match(/\s|[^oxb0]/)) return null;
+  //   if (this.match(/\s|[^oxb0]/)) return null;
   console.log(this.match(/^([+-]*0[xob]\w{3})|^([+-]*\d{3})/) === null)
 
-
-//   if (this.match(/\W/)) return null;
+  //   if (this.match(/\W/)) return null;
 
   return this.match(/^([+-]*0[xob]\w{3})|^([+-]*\d{3})/) ? +this : null
 
-//   console.log(this.match(/^([+-]*0[xob]\w{3})|^([+-]*\d{3})/))
+  //   console.log(this.match(/^([+-]*0[xob]\w{3})|^([+-]*\d{3})/))
 }
