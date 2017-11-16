@@ -6,11 +6,11 @@
 // Return the new string with those pairs removed.
 
 function peelPairs(str, n) {
-  let p = str.split('').map(i => +i)
+  const p = str.split('').map(i => +i);
   for (let i = 0; i < str.length; i += 1) {
-    for (let j = i + 1;  j < str.length; j += 1) {
-      if(p[i] + p[j] === n) {
-        return peelPairs(str.replace(p[i],'').replace(p[j],''), n);
+    for (let j = i + 1; j < str.length; j += 1) {
+      if (p[i] + p[j] === n) {
+        return peelPairs(str.replace(p[i], '').replace(p[j], ''), n);
       }
     }
   }
