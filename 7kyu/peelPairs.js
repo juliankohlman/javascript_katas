@@ -10,17 +10,19 @@ peelPairs('732374', 6) => '77'
 peelPairs('245638363', 10) => '53363'
 
 function peelPairs(str, n) {
-//   console.log(str)
-//   let nums = str.split('').map(i=>+i).filter(i=>i>n)
-//   console.log(nums)
-//   if (nums.length > 0) return nums.join('')
-// //   return nums.filter(function(i,idx,col){
-// //     return !col.find((a,ind,arr) => i + a === n)
-// //   }).join('')
+  let p = [];
   for (chr of str) {
     console.log(chr);
-    console.log(str.includes(n - chr) && n - chr !== chr)
+//     console.log(str.includes(n - chr) && n - chr !== chr)
+    if (str.includes(n - chr)) {
+      console.log(str.indexOf(chr), str.lastIndexOf(n - chr))
+      if (str.indexOf(chr) !== str.lastIndexOf(n - chr)) {
+        p.push([str[str.indexOf(chr)],str[str.lastIndexOf(n - chr)]])
+      }
+    }
   }
+//    && str.indexOf(chr) !== str.lastIndexOf(chr)
+  console.log(p)
 }
 
 
