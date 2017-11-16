@@ -21,10 +21,9 @@
 // the biggest remainder found is 6, and since 6 is an even number --> the string
 // is returned in minuscule.
 
-
 function kira(a, b, c) {
-
-
-
-
+  const remainder = Math.max(...a.map((_, idx, col) => (col[idx] % b[idx])));
+  return remainder % 2 === 0 ? c.toLowerCase() : c.toUpperCase();
 }
+
+kira([16, 16], [10, 5], 'Doctor');
