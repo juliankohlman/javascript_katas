@@ -17,6 +17,6 @@ function peelPairs(str, n) {
   return str;
 }
 
-peelPairs('14642', 3) // => '464'
-peelPairs('732374', 6) // => '77'
-peelPairs('245638363', 10) // => '53363'
+peelPairs('14642', 3); // => '464'
+peelPairs('732374', 6); // => '77'
+peelPairs('245638363', 10); // => '53363'
