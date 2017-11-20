@@ -18,6 +18,15 @@
 // tickets([25, 25, 50]) // => YES
 // tickets([25, 100])    // => NO. Vasya will not have enough money to give change to 100 dollars
 
-function tickets(peopleInLine){
+function tickets(peopleInLine) {
+  console.log(peopleInLine)
+  if (peopleInLine[0] !== 25) return 'NO'
+  if (peopleInLine[1] > peopleInLine[0]) return 'NO'
+  let register = peopleInLine[0];
+  for (let i = 1; i < peopleInLine.length; i += 1) {
+    if (register < peopleInLine[i]) return 'NO'
+    register += peopleInLine[i]
 
+  }
+  return 'YES'
 }
