@@ -11,7 +11,7 @@
 // negative my appear more than once.
 
 function solve(arr) {
-  return arr.find(i => arr.includes(i) && !arr.includes(-i));
+  return arr.find(i => !arr.includes(-i));
 }
 
 solve([1, -1, 2, -2, 3]); // 3
