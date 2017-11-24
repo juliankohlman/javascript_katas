@@ -29,6 +29,14 @@ function doubles(s) {
   return dbl.test(rmv) ? doubles(rmv) : rmv;
 }
 
+// shortened version
+// function doubles(s) {
+//   let dbl = /(.)\1{1}/g;
+//   return dbl.test(s.replace(dbl,'')) ? doubles(s.replace(dbl,'')) : s.replace(dbl,'')
+// }
+
+
+
 doubles('abbbzz'); // 'ab'
 doubles('zzzzykkkd'); // 'ykd'
 doubles('abbcccdddda'); // 'aca'
