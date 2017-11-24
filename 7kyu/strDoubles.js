@@ -23,6 +23,15 @@
 
 // The strings will contain lowercase letters only. More examples in the test cases.
 
-function doubles(s){
-    //..
+function doubles(s) {
+  const rmv = s.replace(/(.)\1{1}/g, '');
+  const dbl = /(.)\1{1}/g;
+  return dbl.test(rmv) ? doubles(rmv) : rmv;
 }
+
+doubles('abbbzz'); // 'ab'
+doubles('zzzzykkkd'); // 'ykd'
+doubles('abbcccdddda'); // 'aca'
+doubles('vvvvvoiiiiin'); // 'voin'
+doubles('rrrmooomqqqqj'); // 'rmomj'
+doubles('xxbnnnnnyaaaaam'); // 'bnyam'
