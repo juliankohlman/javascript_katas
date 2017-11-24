@@ -35,7 +35,11 @@ function doubles(s) {
 //   return dbl.test(s.replace(dbl,'')) ? doubles(s.replace(dbl,'')) : s.replace(dbl,'')
 // }
 
-
+// Codewars solution
+// function doubles(s){
+//   do {var t=s, s=t.replace(/(.)\1/g,'');} while (t!==s);
+//   return s;
+// }
 
 doubles('abbbzz'); // 'ab'
 doubles('zzzzykkkd'); // 'ykd'
