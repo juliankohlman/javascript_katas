@@ -28,7 +28,7 @@ function wordPattern(pattern, str) {
     return col.indexOf(i) === idx
   })
   console.log(aSame)
-  return Object.keys(patternWord).length < aSame || ptn.length > words.length ? false : true
-//   return diffStr.join(' ') === str
+  if (Object.keys(patternWord).length > aSame.length) return false;
+  return diffStr.join(' ') === str
 }
 
