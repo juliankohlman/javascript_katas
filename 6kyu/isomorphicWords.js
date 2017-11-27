@@ -30,6 +30,11 @@ function isomorph(a, b) {
   return isoA.every((i, idx, arr) => arr.indexOf(i) === isoB[idx]);
 }
 
+// CodeWars solution
+// function isomorph(a, b) {
+//   return String([...a].map(v => a.indexOf(v))) === String([...b].map(v => b.indexOf(v)));
+// }
+
 console.log(isomorph('ESTATE', 'DUELED'));//  true)
 isomorph('XXX', 'YYY');//  true)
 isomorph('SEE', 'SAW');//  false)
