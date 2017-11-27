@@ -24,5 +24,13 @@
 // ABAB CD
 
 function isomorph(a, b) {
-  // Happy coding!
+  const isoA = a.split('').map((i, _, arr) => arr.indexOf(i));
+  const isoB = b.split('').map((i, _, arr) => arr.indexOf(i));
+  return isoA.length !== isoB.length ? false : isoA.every((i, idx, arr) => arr.indexOf(i) === isoB[idx]);
 }
+
+isomorph('ESTATE', 'DUELED');//  true)
+isomorph('XXX', 'YYY');//  true)
+isomorph('SEE', 'SAW');//  false)
+isomorph('XXY', 'XYY');//  false)
+isomorph('abcdefghijk', 'abcdefghijba');//  false);

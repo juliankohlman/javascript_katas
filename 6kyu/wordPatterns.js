@@ -18,6 +18,13 @@ function wordPattern(pattern, str) {
   return Object.keys(ptnStr).length > str.split(' ').filter((i, idx, col) => col.indexOf(i) === idx).length ? false : testStr === str;
 }
 
+// CodeWars solution
+// function wordPattern(pattern, str) {
+//     const p = pattern.split('').map((v, i, a) => a.indexOf(v))
+//     const s = str.split(' ').map((v, i, a) => a.indexOf(v))
+//     return p.every((v, i) => v === s[i])
+// }
+
 wordPattern('abab', 'apple banana apple banana');// , true);
 wordPattern('abba', 'car truck truck car');// , true);
 wordPattern('abab', 'apple banana banana apple');// , false);
