@@ -12,23 +12,15 @@
 
 
 function wordPattern(pattern, str) {
-  //code me
-  console.log(pattern, str)
-  const patternWord = {};
-  const ptn = pattern.split('')
-  const words = str.split(' ')
-  ptn.forEach((i,idx) => {
-    patternWord[i] = words[idx]
-  });
-  console.log(Object.keys(patternWord))
-
-  let diffStr = pattern.split('').map((i) => i = patternWord[i]);
-//   if (words.filter(i => words.every(i => i !== i) && Object.keys(patternWord).length === 0)) return false
-  let aSame = words.filter((i,idx,col) => {
-    return col.indexOf(i) === idx
-  })
-  console.log(aSame)
-  if (Object.keys(patternWord).length > aSame.length) return false;
-  return diffStr.join(' ') === str
+  const ptnStr = {};
+  pattern.split('').forEach((i, idx) => (ptnStr[i] = str.split(' ')[idx]));
+  const testStr = pattern.split('').map(i => ptnStr[i]).join(' ');
+  return Object.keys(ptnStr).length > str.split(' ').filter((i, idx, col) => col.indexOf(i) === idx).length ? false : testStr === str;
 }
 
+wordPattern('abab', 'apple banana apple banana');// , true);
+wordPattern('abba', 'car truck truck car');// , true);
+wordPattern('abab', 'apple banana banana apple');// , false);
+wordPattern('aaaa', 'cat cat cat cat');// , true);
+wordPattern('aaaa', 'cat cat dog cat');// , false);
+wordPattern('bbbabcb', 'c# c# c# javascript c# python c#');// , true);
