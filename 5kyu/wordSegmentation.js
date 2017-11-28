@@ -11,12 +11,16 @@
 // The dictionary, however, may be empty of words.
 
 function segmentify(dictionary, inputString) {
-  console.log(dictionary)
-  console.log(inputString)
+//   console.log(dictionary)
+//   console.log(inputString)
 //   console.log(dictionary[0].indexOf('c'))
   let matches = [];
   dictionary.forEach((str,idx,arr) => {
-    matches.push(inputString.match(str)[0])
+//     console.log(inputString.match(str))
+    matches.push(inputString.match(str))
   });
   console.log(matches)
+//   console.log(inputString.slice(matches[0].index))
+  console.log(matches.sort((a,b)=> a.index > b.index ? 1 : -1))
+//   console.log( matches.sort((a,b)=> b[1]))
 }
