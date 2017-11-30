@@ -12,13 +12,10 @@
 function sortByArea(array) {
   const areas = {};
   const inputCopy = array.slice(0);
-  inputCopy.forEach((dimension) => {
-    if (Array.isArray(dimension)) {
-      areas[dimension] = dimension.reduce((a, b) => a * b);
-    } else {
-      areas[dimension] = Math.PI * (dimension ** 2);
-    }
+  inputCopy.forEach((d) => {
+    Array.isArray(d) ? areas[d] = d[0] * d[1] : areas[d] = Math.PI * (d ** 2);
   });
+
   return inputCopy.sort((a, b) => areas[a] - areas[b]);
 }
 
