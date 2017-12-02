@@ -39,6 +39,6 @@
 // slot("!!?!?") === 100
 // slot("!?!?!") === 0
 
-function slot(s){
-  //coding and coding....
+function slot(s) {
+  // SOLVE IT ON PAPER FIRST
 }
