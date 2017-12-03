@@ -41,4 +41,5 @@
 
 function slot(s) {
   // SOLVE IT ON PAPER FIRST
+  // use regex's
 }
