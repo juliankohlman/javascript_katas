@@ -1,7 +1,7 @@
- // You are playing a simple slot machine that only contains exclamation marks and question marks.
- // Every time the slot machine is started, a string of 5 length is obtained.
- // If you're lucky enough to get a Special permutation, you'll win the bonus.
- // Give you a string s, return the highest bonus.
+// You are playing a simple slot machine that only contains exclamation marks and question marks.
+// Every time the slot machine is started, a string of 5 length is obtained.
+// If you're lucky enough to get a Special permutation, you'll win the bonus.
+// Give you a string s, return the highest bonus.
 
 // Bouns list:
 
