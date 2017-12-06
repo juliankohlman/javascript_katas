@@ -41,7 +41,7 @@ function foldArray (array, runs) {
   fold.forEach((item, index) => {
     newArray[index] += item;
   });
-  runs--
+  runs--;
   return runs === 0 ? newArray : foldArray(newArray,runs);
 }
 
