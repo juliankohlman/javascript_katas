@@ -10,7 +10,12 @@
 // Notice also that you return the characters from the first string concatenated with those from the
 // second string.
 
-function solve(a,b) {
-  const getUnique = (s1,s2) => s1.split('').filter( i => !s2.split('').includes(i)).join('');
-  return getUnique(a,b) + getUnique(b,a);
-};
+function solve(a, b) {
+  const getUnique = (s1, s2) => s1.split('').filter(i => !s2.split('').includes(i)).join('');
+  return getUnique(a, b) + getUnique(b, a);
+}
+
+solve('xyab', 'xzca'); // 'ybzc'
+solve('xyabb', 'xzca'); // 'ybbzc'
+solve('abcd', 'xyz'); // 'abcdxyz'
+solve('xxx', 'xzca'); // 'zca'
