@@ -6,7 +6,7 @@
 
 function smartSum(...args) {
   let result = [];
-  args.map((item) => {
+  args.forEach((item) => {
     Array.isArray(item) ? result = result.concat(smartSum(...item)) : result.push(item);
   });
   return result.reduce((a, b) => a + b);
