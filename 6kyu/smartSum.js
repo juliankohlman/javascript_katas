@@ -1,18 +1,16 @@
-const flatten = (elements) => {
-  let flat = [];
-  elements.forEach(item => {
-    return Array.isArray(item) ? flat = flat.concat(flatten(item)) : flat.push(item);
-  });
-  return flat;
-};
+// Your task is to write a function, smartSum, that returns the sum of an arbitrary number of
+// arguments. But be careful, some of your arguments can be arrays of numbers or nested arrays.
 
-function smartSum() {
-  let input = Array.from(arguments);
+// smartSum(1,2,3,[4,5],6); // returns 21
+// smartSum(1,2,[[3,4],5],6); // returns 21
 
-  input.map(item => {
-    return Array.isArray(item) ? flatten(input.concat(item)) : item;
+function smartSum(...args) {
+  let result = [];
+  args.map((item) => {
+    Array.isArray(item) ? result = result.concat(smartSum(...item)) : result.push(item);
   });
-  console.log(input)
-  return input.some(i => Array.isArray(i)) ? flatten(input) : input;
-  console.log(input.reduce((a,b) => a + b));
+  return result.reduce((a, b) => a + b);
 }
+
+smartSum(1, 2);
+smartSum([1, 2], 3);
