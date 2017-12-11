@@ -4,13 +4,13 @@
 
 function arraySum(arr) {
   let result = [];
-  arr.forEach(item => {
+  arr.forEach((item) => {
     Array.isArray(item) ? result = result.concat(arraySum(item)) : result.push(item);
   });
   return result.filter(i => typeof i === 'number').reduce((a, b) => a + b);
 }
 
-arraySum([1, 2, 3, [4, 5, 6 , [7]]]);
+arraySum([1, 2, 3, [4, 5, 6, [7]]]);
 // function arraySum(arr) {
 //   return arr.reduce((n, x) => n + (Array.isArray(x) ? arraySum(x) : isNaN(x) ? 0 : x), 0)
 // }
