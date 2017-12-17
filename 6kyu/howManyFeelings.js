@@ -29,7 +29,11 @@ function countFeelings(string, array) {
   return feelings.length === 1 ? '1 feeling.' : `${feelings.length} feelings.`;
 }
 
-countFeelings('yliausoenvjw', ['anger', 'awe', 'joy', 'love', 'grief']); // '3 feelings.'
-countFeelings('angerw', ['anger', 'awe', 'joy', 'love', 'grief']); // '2 feelings.'
-countFeelings('griefgriefgrief', ['anger', 'awe', 'joy', 'love', 'grief']); // '1 feeling.'
-countFeelings('abcdkasdfvkadf', ['desire', 'joy', 'shame', 'longing', 'fear']); // '0 feelings.'
+// '3 feelings.'
+console.log(countFeelings('yliausoenvjw', ['anger', 'awe', 'joy', 'love', 'grief']));
+// '2 feelings.'
+console.log(countFeelings('angerw', ['anger', 'awe', 'joy', 'love', 'grief']));
+// '1 feeling.'
+console.log(countFeelings('griefgriefgrief', ['anger', 'awe', 'joy', 'love', 'grief']));
+// '0 feelings.'
+console.log(countFeelings('abcdkasdfvkadf', ['desire', 'joy', 'shame', 'longing', 'fear']));
