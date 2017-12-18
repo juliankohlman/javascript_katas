@@ -19,20 +19,24 @@
 // returns 26.25
 
 function shoppingListCost(arr) {
-  //your code here
-  console.log(groceries.Chocolate);
-  arr.forEach(item => {
-    let name = item[0];
-    let amount = item[1];
-    // break down the steps caluculate the price first
-    let price = groceries[name].price * amount;
-    if (groceries[name].discount > 0) {
-      price = price - (price / groceries[name].discount);
+  const discount = (item) => groceries[item].discount === 0 ? 0 : (groceries[item].price / groceries[item].discount);
+  const listObj = arr.reduce((l,[k,v]) => (l[k] = v,l),{});
+//   console.log(groceries)
+  for (let item in listObj) {
+    listObj[item] *= groceries[item].price
+  }
+  for (let item in listObj) {
+    listObj[item] -= (listObj[item] * discount(item))
+  }
+//   console.log(arr)
+//   console.log(groceries)
+  for (let item in listObj) {
+    if (groceries[item].bogof) {
+      let deduct = Math.floor(listObj[item] / 2)
+//       console.log(item, deduct);
+      listObj[item] -= deduct
+      listObj[item] = listObj[item].toFixed(2);
     }
-    if (groceries[name].bogof) {
-      price = price / 2;
-    }
-//     let discount =
-    console.log(`${name} cost $ ${price}`);
-  });
+  }
+  console.log(listObj)
 }
