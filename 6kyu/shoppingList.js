@@ -24,12 +24,13 @@ function shoppingListCost(arr) {
   arr.forEach(item => {
     let name = item[0];
     let amount = item[1];
-    let price = groceries[name].price * amount
+    // break down the steps caluculate the price first
+    let price = groceries[name].price * amount;
     if (groceries[name].discount > 0) {
-      price = price - (price / groceries[name].discount)
+      price = price - (price / groceries[name].discount);
     }
     if (groceries[name].bogof) {
-      price = price / 2
+      price = price / 2;
     }
 //     let discount =
     console.log(`${name} cost $ ${price}`);
