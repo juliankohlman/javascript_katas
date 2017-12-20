@@ -23,7 +23,7 @@ function shoppingListCost(arr) {
   const listObj = arr.reduce((l,[k,v]) => (l[k] = v,l),{});
 //   console.log(groceries)
   for (let item in listObj) {
-    listObj[item] *= groceries[item].price
+    listObj[item] *= groceries[item].price;
   }
   for (let item in listObj) {
     listObj[item] -= (listObj[item] * discount(item))
