@@ -2,9 +2,9 @@
 // 125. the next palindrome is 131.
 
 function nextPalindrome(n) {
-  n += 1;
-  let palindrome = (n + '').split('').reverse().join('');
-  if (n == palindrome) return n;
+  n++;
+  const palindrome = +(n + '').split('').reverse().join('');
+  if (n === palindrome) return n;
   return nextPalindrome(n);
 }
 
