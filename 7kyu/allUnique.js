@@ -9,6 +9,6 @@ function hasUniqueChars(str) {
   return chrs.every((i, idx) => idx === chrs.lastIndexOf(i));
 }
 
-hasUniqueChars('  nAa') // false
-hasUniqueChars('abcdef') // true
-hasUniqueChars('++-') // false
+hasUniqueChars('  nAa'); // false
+hasUniqueChars('abcdef'); // true
+hasUniqueChars('++-'); // false
