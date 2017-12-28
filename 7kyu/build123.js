@@ -18,16 +18,17 @@
 // The buildOneTwoThree function should create and return a linked list with three nodes: 1 -> 2 ->
 // 3 -> null
 
+// Complete this entire series
 function Node(data) {
   this.data = data;
   this.next = null;
 }
 
 function push(head, data) {
-  // Go.
+  //
 }
 
 function buildOneTwoThree() {
-  // Go.
+  //
 }
 
