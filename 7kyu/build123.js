@@ -25,10 +25,16 @@ function Node(data) {
 }
 
 function push(head, data) {
-  //
+  if (head === null) return new Node(data);
+  const nextNode = new Node(data);
+  nextNode.next = head;
+  head = nextNode;
+  return head;
 }
 
 function buildOneTwoThree() {
-  //
+  let origin = new Node(3);
+  origin = push(origin,2);
+  origin = push(origin,1);
+  return origin;
 }
-
