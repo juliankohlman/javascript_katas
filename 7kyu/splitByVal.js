@@ -14,6 +14,6 @@
 
 // splitByValue(k, elements) = [1, 3, 4, 2, 5, 7, 6].
 
-function splitByValue(k, elements){
+function splitByValue(k, elements) {
 
 }
