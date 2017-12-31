@@ -10,6 +10,11 @@
 //     If the average length is not an integer, use Math.round().
 //     The input array's length > 1
 
-function averageLength() {
+function averageLength(input) {
   // good luck
+  console.log(input);
 }
+
+averageLength(['u', 'y']); // ['u', 'y']
+averageLength(['aa', 'bbb', 'cccc']); // ['aaa', 'bbb', 'ccc']
+averageLength(['aa', 'bb', 'ddd', 'eee']); // ['aaa', 'bbb', 'ddd', 'eee']
