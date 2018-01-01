@@ -15,6 +15,13 @@ function averageLength(arr) {
   return arr.map(i => i[0].repeat(avg));
 }
 
+// CodeWars solution
+// function averageLength(arr) {
+                              // smart use of join
+//   const c = Math.round(arr.join('').length/arr.length)
+//   return arr.map(e=>e[0].repeat(c))
+// }
+
 averageLength(['u', 'y']); // ['u', 'y']
 averageLength(['aa', 'bbb', 'cccc']); // ['aaa', 'bbb', 'ccc']
 averageLength(['aa', 'bb', 'ddd', 'eee']); // ['aaa', 'bbb', 'ddd', 'eee']
