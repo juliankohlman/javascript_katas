@@ -12,8 +12,7 @@
 
 function averageLength(arr) {
   const avg = Math.round(arr.map(i => i.length).reduce((a, b) => a + b) / arr.length);
-  console.log(avg);
-  console.log(arr.map(i => i[0].repeat(avg)));
+  return arr.map(i => i[0].repeat(avg));
 }
 
 averageLength(['u', 'y']); // ['u', 'y']
