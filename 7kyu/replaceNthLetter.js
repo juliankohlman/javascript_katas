@@ -28,6 +28,9 @@ function replaceNth(text, n, oldValue, newValue) {
   }).join('');
 }
 
+// CodeWars regex solution
+// const replaceNth=(s,n,x,y,i=1)=>n<1?s:s.replace(RegExp(x,"g"),_=>i++%n?x:y)
+
 replaceNth('Vader said: No, I am your father!', 2, 'a', 'o'); // 'Vader soid: No, I am your fother!'
 replaceNth('Vader said: No, I am your father!', 4, 'a', 'o'); // 'Vader said: No, I am your fother!'
 replaceNth('Vader said: No, I am your father!', 6, 'a', 'o'); // 'Vader said: No, I am your father!'
