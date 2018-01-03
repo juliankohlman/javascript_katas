@@ -20,13 +20,14 @@ console.log(s);
  let values = Object.values(freq);
  console.log(values);
  let len = Object.values(freq).length;
-//  if (len === 1) return false;
-//  if (values.every((i,idx,arr) => arr[0] === i )) return false;
+ if (values.every((i) => i === 1)) return true;
 
  console.log(len)
  console.log(values);
-  console.log(values.sort());
-
+ console.log(values.sort((a,b) => a - b));
+ console.log(values)
+ if (values.lastIndexOf(1) === 0 && values.slice(1).every((i) => i === values[1])) return true;
+//  if (values.lastIndexOf(1) === 0) return true;
  let chrTotal = Object.values(freq).reduce((a,b) => a + b);
  console.log(chrTotal);
 
