@@ -13,13 +13,20 @@
 function solve(s) {
   const freq = {};
   s.split('').forEach(i => freq[i] ? freq[i] += 1 : freq[i] = 1);
-  const values = Object.values(freq);
-  const len = Object.values(freq).length;
+  const values = Object.values(freq).sort((a, b) => a - b);
   if (values.every(i => i === 1)) return true;
   if (values.lastIndexOf(1) === 0 && values.slice(1).every(i => i === values[1])) return true;
-  const chrTotal = Object.values(freq).reduce((a, b) => a + b);
-  return (chrTotal - 1) % len === 0;
+  const chrTotal = values.reduce((a, b) => a + b) - 1;
+  return chrTotal % values.length === 0;
 }
+
+// Codewars solution for comparison
+// function solve(s){
+//   var h={};
+//   [...s].forEach(c=>h[c]=(h[c]||0)+1)
+//   var r=Object.values(h).sort((a,b)=>a-b)
+//   return r.slice(0,-1).every(x=>x==r[r.length-1]-1)||r[0]==1&&r.slice(1).every(x=>x==r[1])
+// }
 
 console.log(solve('aaaa')); // true
 solve('abba'); // false
