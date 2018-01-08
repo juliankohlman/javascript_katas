@@ -23,7 +23,7 @@ function replaceLetters(word) {
   // good luck
   console.log(word.split('').map((l,idx,arr) => {
     if (consonants.includes(l)) {
-      let replacement = alphabet.slice(alphabet.indexOf(l)).find(i => vowels.includes(i))
+      let replacement = alphabet.slice(alphabet.indexOf(l)).find(i => vowels.includes(i));
       l = replacement;
     } else {
 

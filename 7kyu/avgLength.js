@@ -17,7 +17,7 @@ function averageLength(arr) {
 
 // CodeWars solution
 // function averageLength(arr) {
-                              // smart use of join
+// smart use of join
 //   const c = Math.round(arr.join('').length/arr.length)
 //   return arr.map(e=>e[0].repeat(c))
 // }
