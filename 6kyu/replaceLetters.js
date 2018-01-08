@@ -21,12 +21,17 @@ const vowels = ['a', 'e','i','o','u'];
 
 function replaceLetters(word) {
   // good luck
+  console.log(word);
   console.log(word.split('').map((l,idx,arr) => {
     if (consonants.includes(l)) {
-      let replacement = alphabet.slice(alphabet.indexOf(l)).find(i => vowels.includes(i));
-      l = replacement;
+      let replacement = alphabet.slice(alphabet.indexOf(l)).find(i => vowels.includes(i))
+      if (replacement) {
+        l = replacement;
+      } else {
+        l = 'a';
+      }
     } else {
-
+      l = alphabet.slice(alphabet.indexOf(l)).find(i => consonants.includes(i));
     }
     return l;
   }));
