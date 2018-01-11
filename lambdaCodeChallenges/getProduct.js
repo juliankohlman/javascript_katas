@@ -9,5 +9,12 @@
 // Edge cases: No division, as some arrays may include 0. Target time: O(n).
 
 function getProduct(arr) {
-
+  const result = [];
+  arr.forEach((_, index) => {
+    // not O(n) time complexity
+    result.push(arr.filter((i, idx) => idx !== index).reduce((a, b) => a * b));
+  });
+  return result;
 }
+
+console.log(getProduct([1, 9, 6, 5, 2]));
