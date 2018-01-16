@@ -13,7 +13,6 @@
 function findMissing(arr1, arr2) {
   const a1 = arr1.sort((a, b) => a > b);
   const a2 = arr2.sort((a, b) => a > b);
-  // console.log(a1, a2)
   return a1.map((i, idx) => a1[idx] === a2[idx] ? null : i).find(i => i !== null);
 }
 
