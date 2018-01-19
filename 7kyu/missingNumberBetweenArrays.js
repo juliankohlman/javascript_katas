@@ -10,10 +10,10 @@
 
 // find_missing([6, 1, 3, 6, 8, 2], [3, 6, 6, 1, 2]) => 8
 
-function findMissing(arr1, arr2) {
+function findMissing (arr1, arr2) {
   const a1 = arr1.sort((a, b) => a > b);
   const a2 = arr2.sort((a, b) => a > b);
   return a1.map((i, idx) => a1[idx] === a2[idx] ? null : i).find(i => i !== null);
 }
 
-console.log(findMissing([6, 1, 3, 6, 8, 2], [3, 6, 6, 1, 2]));
+console.log(findMissing([6, 1, 3, 6, 8, 2], [3, 6, 6, 1, 2]))
