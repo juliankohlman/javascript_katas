@@ -16,5 +16,27 @@
 // If the array can't be split into equal sides, return -1.
 
 function equalSides (arr) {
+  let sideA = [];
+  let sideB = [];
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] <= arr[i + 1]) {
+      sideA.push(arr[i]);
+    } else if (arr[i] > arr[i + 1]) {
+      sideB.push(arr[i]);
+    }
+  }
+  sideB.push(arr[arr.length - 1])
+  let root = arr.indexOf(sideB.shift());
+  console.log(root);
+
+  let a = sideA.reduce((a,b) => a + b);
+  console.log(a)
+
+  let b = sideB.reduce((a,b) => a + b);
+  console.log(a === b)
+
+  return a === b ? root : -1;
 
 }
+equalSides([1,2,3,4,3,2,1]);
+equalSides([1,1,1,4,2,1]);

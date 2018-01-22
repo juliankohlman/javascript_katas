@@ -35,5 +35,7 @@
 // for example: "Bn14Bn14Bn8P9"
 
 function frame(balls){
-
+  console.log(balls)
+  console.log(blz)
+  console.log(balls.match(/b{1}\w\d+|\w{1}\d+/gi))
 }
