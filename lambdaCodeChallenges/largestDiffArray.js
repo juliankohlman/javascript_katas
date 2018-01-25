@@ -11,9 +11,10 @@ function largestDifference(arr) {
   let maxDiff = 0;
   arr.forEach((number, idx) => {
     for (let i = idx + 1; i < arr.length; i += 1) {
-      if (arr[i] - number > maxDiff) {
-        maxDiff = arr[i] - number;
-      }
+      arr[i] - number > maxDiff ? maxDiff = arr[i] - number : maxDiff;
+      // if (arr[i] - number > maxDiff) {
+      //   maxDiff = arr[i] - number;
+      // }
     }
   });
   return maxDiff;
