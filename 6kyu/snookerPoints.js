@@ -35,7 +35,11 @@
 // for example: "Bn14Bn14Bn8P9"
 
 function frame(balls) {
-  console.log(balls);
-  console.log(blz);
-  console.log(balls.match(/b{1}\w\d+|\w{1}\d+/gi));
+  console.log(balls)
+  console.log(blz)
+//   console.log(balls.match(/b{1}[n,e,k]\d*|\w{1}\d+|\w{1}/gi))
+  const score = balls.match(/b{1}[n,e,k]\d*|\w{1}\d+|./gi);
+  console.log(score);
+  let tuples = score.map(score => score.split(/(\d+)/).filter(Boolean));
+  console.log(tuples)
 }
