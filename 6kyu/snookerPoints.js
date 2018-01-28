@@ -34,22 +34,23 @@
 // If the total score is more than 147 - 'invalid data'
 // for example: "Bn14Bn14Bn8P9"
 
-function frame(balls){
-  console.log(balls)
-  if (balls === '') return 0;
+function frame(balls) {
+//   console.log(balls)
+//   if (balls === '') return 0;
   if (balls.includes('W')) return 'Foul';
-  console.log(blz)
-  console.log(balls.match(/b{1}[n,e,k]\d*|\w{1}\d+|\w{1}/gi))
+//   console.log(blz)
+//   console.log(balls.match(/b{1}[n,e,k]\d*|\w{1}\d+|\w{1}/gi))
   const score = balls.match(/b{1}[n,e,k]\d*|\w{1}\d+|./gi);
-  console.log(score);
-  let tuples = score.map(score => score.split(/(\d+)/).filter(Boolean));
-  console.log(tuples)
-  let pointsEarned = tuples.map((pair,idx) => {
+//   console.log(score);
+  if (score === null) return 0;
+  const tuples = score.map(s => s.split(/(\d+)/).filter(Boolean));
+//   console.log(tuples)
+  const pointsEarned = tuples.map((pair) => {
     if (pair.length > 1) {
       return +pair[1] * +blz[pair[0]];
     }
     return +blz[pair[0]];
-  }).reduce((a,b) => a + b,0);
-  console.log(pointsEarned);
-  return pointsEarned > 147 ? 'invalid data' : pointsEarned
+  }).reduce((a, b) => a + b);
+  // console.log(pointsEarned);
+  return pointsEarned > 147 ? 'invalid data' : pointsEarned;
 }
