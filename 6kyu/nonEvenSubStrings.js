@@ -4,9 +4,10 @@
 
 // solve("1341") = 7. See test cases for more examples.
 
+
 function solve(s) {
-  console.log(s.split(''))
-  let nums = s.split('')
+  console.log(s.split(''));
+  let nums = s.split('');
   let total = 0;
   for (let i = 0; i < s.length; i += 1) {
     if (s.slice(i) % 2 === 1) total += 1
