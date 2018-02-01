@@ -21,6 +21,6 @@ function common(a,b,c){
    } else elementHash[i] = 1;
    }));
  }
-
+ // object.entries()3
    console.log(elementHash);
 }
