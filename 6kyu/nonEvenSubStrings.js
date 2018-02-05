@@ -10,10 +10,10 @@ function solve(s) {
   let nums = s.split('');
   let total = 0;
   for (let i = 0; i < s.length; i += 1) {
-    if (s.slice(i) % 2 === 1) total += 1
-    for (let j = 1; j < s.length - 1; j += 1) {
-      if (s.slice(i,j).join('') % 2 === 1) total += 1
-    }
+      if (s.slice(i) % 2 === 1) total += 1
+      for (let j = 1; j < s.length - 1; j += 1) {
+          if (s.slice(i, j).join('') % 2 === 1) total += 1
+      }
   }
   return total;
 }
