@@ -11,16 +11,16 @@
 
 // Good luck!
 
-function common(a,b,c){
- let arrs = [a,b,c];
- let elementHash = {};
- for (let i = 0; i < 3; i++) {
-   arrs[i].forEach((i => {
-   if (elementHash[i]) {
-     elementHash[i]++;
-   } else elementHash[i] = 1;
-   }));
- }
- // object.entries()3
-   console.log(elementHash);
+function common(a, b, c) {
+  let arrs = [a, b, c];
+  let elementHash = {};
+  for (let i = 0; i < 3; i++) {
+    arrs[i].forEach((i => {
+      if (elementHash[i]) {
+        elementHash[i]++;
+      } else elementHash[i] = 1;
+    }));
+  }
+  // object.entries()3
+  console.log(elementHash);
 }
