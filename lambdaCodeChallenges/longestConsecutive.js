@@ -11,7 +11,7 @@
 function longestConsecutive(arr, k) {
   let result = '';
   for (let i = 0; k > 0 && i <= arr.length - k; i++) {
-    let currentLong = arr.slice(i, i + k).join('');
+    let currentLong = arr.slice(i, k + i).join('');
     if (currentLong.length > result.length) {
       result = currentLong;
     }
