@@ -9,10 +9,10 @@
 // NOTE: All numbers will be whole numbers greater than 0.
 
 function expandedForm(num) {
-  let digits = (num + "").split('').map(i => +i);
+  let digits = (num + '').split('').map(i => +i);
   let results = [];
   digits.forEach((digit,idx) => {
-    results.push(digits[idx] + '0'.repeat((digits.length - 1) - idx))
-  })
+    if (digits[idx] !== 0) results.push(digits[idx] + '0'.repeat((digits.length - 1) - idx));
+  });
   return results.filter(i => +i !== 0).join(' + ')
 }
