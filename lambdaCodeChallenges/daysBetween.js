@@ -14,4 +14,4 @@ function daysBetween(start, end) {
   return Math.floor((eConversion - sConversion) / (1000 * 60 * 60 * 24)).toString();
 }
 
-daysBetween('04/02/2014', '11/04/2014');
+daysBetween('12/02/2014', '11/04/2016');
