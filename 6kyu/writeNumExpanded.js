@@ -9,9 +9,7 @@
 // NOTE: All numbers will be whole numbers greater than 0.
 
 function expandedForm(num) {
-  //Your code here...
   let digits = (num + "").split('').map(i => +i);
-  console.log(digits)
   let results = [];
   digits.forEach((digit,idx) => {
     results.push(digits[idx] + '0'.repeat((digits.length - 1) - idx))
