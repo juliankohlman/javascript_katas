@@ -3,6 +3,12 @@
 // not become smaller than the original string, your method should return the original string. You
 // can assume the string has only uppercase and lowercase letters (a - z).
 
+
+// regex
+  // (.) capture any char
+  // \1 backreference to capture
+  // {0,} repeats 0 or more times
+  // /gi global, case insensitive
 function stringCompression(str) {
   const sections = str.match(/(.)\1{0,}/gi);
   let result = '';
