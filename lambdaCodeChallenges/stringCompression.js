@@ -12,7 +12,7 @@
 function stringCompression(str) {
   const sections = str.match(/(.)\1{0,}/gi);
   let result = '';
-  sections.forEach(s => result += s[0] + s.length);
+  sections.forEach(s => result += s[0] + s.length); // could use .reduce() too
   return result.length >= str.length ? str : result;
 }
 
