@@ -6,21 +6,12 @@
 
 function checkString(str1, str2, str3) {
   let combined = (str1 + str2).split('');
+  // console.log(str3.length)
   let interleaved = str3.split('');
-  console.log(combined);
-  console.log(str3.split('').every(i => combined.includes(i)));
-  s1valid = interleaved.filter(i => str1.split('').includes(i)).join('') === str1
-  s2valid = interleaved.filter(i => str2.split('').includes(i)).join('') === str2
-  // console.log(s2valid)
-  // if (s1valid === false|| s2valid === false) return false;
-  // return s1valid && s2valid ? true : str3.split('').every(i => combined.includes(i));
-  // return str3.split('').every(i => combined.includes(i));
-  if (str3.split('').every(i => combined.includes(i)) && s1valid && s2valid) return true;
-  return false;
- // // console.log(str3.split('').filter(i => str1.split('').includes(i)));
- // let s1Order = str3.split('').filter(i => str1.split('').includes(i));
- // let s2Order = str3.split('').filter(i => str2.split('').includes(i))
- // console.log(s1Order)
- // console.log(s2Order)
- // return s1Order.join('') === str1 && s2Order.join('') === str2 ? true : false
+  if (combined.length < str3.length || interleaved.every(i => combined.includes(i))) return false;
+  s1valid = interleaved.filter(i => str1.includes(i)).join('');
+  // console.log(s1valid === str1);
+  s2valid = interleaved.filter(i => str2.includes(i)).join('');
+  // console.log(s2valid === str2);
+  return s1valid === str1 && s2valid === str2 && combined.length === str3.length ? true : false;
 }
