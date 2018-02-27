@@ -13,13 +13,16 @@
 // where the value of 5 is '5' because '5' it was the last given value for that key.
 
 function mergeObjects(arr) {
-  let mergedObj = {};
-  arr.forEach(obj => Object.assign(mergedObj, obj));
-  return mergedObj;
+  // let mergedObj = {};
+  // arr.forEach(obj => Object.assign(mergedObj, obj));
+  // return mergedObj;
+  return Object.assign({}, ...arr)
+
+
 }
 
-mergeObjects([
+console.log(mergeObjects([
 {1: '1', 2: '2', 3: '3'},
 {3: '4', 4: '4', 5: '6'},
 {5: '5', 6: '6', 7: '7'}
-]);
+]));
