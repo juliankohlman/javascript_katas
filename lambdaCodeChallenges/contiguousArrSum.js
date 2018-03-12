@@ -19,6 +19,17 @@ function sumArray(arr) {
   return currentMaxSum;
 }
 
-sumArray([-2, -3, 4, -1, -2, 1, 5, -3]);
+// function sumArray(arr) {
+//   let ans = 0;
+//   let sum = 0;
 
+//   for (let i = 0; i < arr.length; i++) {
+//     ans = Math.max(0, ans + arr[i]);
+//     sum = Math.max(sum, ans);
+//   }
+
+//   return sum;
+// }
+
+// sumArray([-2, -3, 4, -1, -2, 1, 5, -3]);
 sumArray([-2, -3, 4, -1, -2, 1, 5, -3]);
