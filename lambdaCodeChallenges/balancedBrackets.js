@@ -21,12 +21,13 @@
 function balancedBrackets(str) {
   let s = str.replace(/[^\(\)|\[\]|\{\}]/g,'')
   let a = s, b;
-  // console.log(b,str);
   do {
-    b = a;
+    b = a; // initialize b to a
     a = a.replace(/\(\)|\[\]|\{\}/g, '');
-  } while (a != b);
-  return !a;
+    console.log('a', a) // if str was balanced it becomes ''
+    console.log(b)      // if str was not balanced some chars will remain
+  } while (a != b); // this condition will be met b/c we called replace on a
+  return !a; // !'' === true !'(' === false
 }
 
-balancedBrackets('()');
+balancedBrackets('[]({}');
