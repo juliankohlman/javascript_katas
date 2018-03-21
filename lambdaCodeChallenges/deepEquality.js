@@ -57,6 +57,9 @@ const johnC = {
 };
 
 function deepEquals(obj1, obj2) {
+  // PRIMITIVE VALUES ARE PASSED BY VALUE
+  // OBJECTS ARE PASSED BY REFERENCE
+  // CONVERT THE OBJECTS TO PRIMITIVES AND MAKE COMPARISON
   return JSON.stringify(obj1) === JSON.stringify(obj2)
 }
 

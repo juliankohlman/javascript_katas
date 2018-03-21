@@ -12,7 +12,7 @@
 
 //  What's the time complexity of your algorithm?  Are there ways you can improve it?
 
-function bubbleSort(arr) {
+function bubbleSort (arr) {
   let sorted = false;
   while (!sorted) {
     sorted = true;
