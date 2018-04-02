@@ -3,12 +3,11 @@
 
 // The string may contain any of the 128 ASCII characters.
 
-
-function hasUniqueChars(str) {
-  const chrs = str.split('');
-  return chrs.every((i, idx) => idx === chrs.lastIndexOf(i));
+function hasUniqueChars (str) {
+  const chrs = str.split('')
+  return chrs.every((i, idx) => idx === chrs.lastIndexOf(i))
 }
 
-hasUniqueChars('  nAa'); // false
-hasUniqueChars('abcdef'); // true
-hasUniqueChars('++-'); // false
+hasUniqueChars('  nAa') // false
+hasUniqueChars('abcdef') // true
+hasUniqueChars('++-') // false

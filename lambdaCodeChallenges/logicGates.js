@@ -17,24 +17,24 @@
 NAND = (x, y) => {
   return +!(x && y);
 }
-console.log(NAND(1,1))
+console.log(NAND(1, 1))
 
 NOT = (n) => {
-  return NAND(n,n);
+  return NAND(n, n);
 }
 // console.log(NOT(0))
 
 AND = (x, y) => {
-  return NOT(NAND(x,y))
+  return NOT(NAND(x, y))
 }
 // console.log(AND(0))
 
 OR =(x, y) => {
   return NAND(NOT(x),NOT(y));
 }
-console.log(OR(0,1))
+console.log(OR(0, 1))
 
 XOR = (x, y) => {
-  return AND(NAND(x,y), OR(x,y))
+  return AND(NAND(x, y), OR(x, y))
 }
 // console.log(XOR(0))
