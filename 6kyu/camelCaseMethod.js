@@ -9,3 +9,4 @@
 String.prototype.camelCase = function () {
   return this.trim().split(' ').map(i => i.slice(0, 1).toUpperCase() + i.slice(1)).join('');
 };
+
