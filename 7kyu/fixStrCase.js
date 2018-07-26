@@ -12,6 +12,8 @@ solve("coDe") = "code".Lowercase characters > uppercase.Change only the "D" to l
 
 function solve(s) {
 	//..
+	// filter by char code upper vs lower case
+	// iterate over string in place keeping track of uCase vs lCase
 }
 
 solve('code'); // => "code";
