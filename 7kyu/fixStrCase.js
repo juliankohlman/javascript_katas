@@ -11,9 +11,12 @@ solve("coDe") = "code".Lowercase characters > uppercase.Change only the "D" to l
  */
 
 function solve(s) {
-	//..
-	// filter by char code upper vs lower case
-	// iterate over string in place keeping track of uCase vs lCase
+	let lower = 0;
+
+	for (let chr of s) {
+		if (chr === chr.toLowerCase()) lower++;
+	}
+	return lower >= s.length / 2 ? s.toLowerCase() : s.toUpperCase();
 }
 
 solve('code'); // => "code";
