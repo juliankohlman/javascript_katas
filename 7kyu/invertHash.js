@@ -14,13 +14,11 @@
   */
 
 function invertHash(hash) {
-	let keys = Object.keys(hash);
-	console.log(keys);
-	let vals = Object.values(hash);
-	console.log(vals);
+	let rev = Object.entries(hash);
 	let invertedHash = {};
-	for (let i = 0; i < vals.length; i++) {
-		invertedHash[vals[i]] = keys[i];
+
+	for (let i = 0; i < rev.length; i++) {
+		invertedHash[rev[i][1]] = rev[i][0];
 	}
 	return invertedHash;
 }
