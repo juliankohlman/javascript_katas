@@ -18,6 +18,8 @@ function sortString(str) {
 		.join('');
 }
 
+// default sort unicode points
+//
 console.log(sortString('dcba'));
 console.log(sortString('zycxbwa'));
 console.log(sortString('AzycxbCwBaA'));
