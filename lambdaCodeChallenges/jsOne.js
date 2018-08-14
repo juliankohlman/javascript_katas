@@ -1,80 +1,73 @@
-// Don't modify this array of objects
-let arcadeGames = [
-	{
-		id: 1,
-		title: 'Arkanoid',
-		year: 1986,
-		manufacturer: 'Taito',
-		genre: 'breakout',
-		max_players: 2,
-		url: 'https://en.wikipedia.org/wiki/Arkanoid'
-	},
-	{
-		id: 2,
-		title: 'Asteroids',
-		year: 1979,
-		manufacturer: 'Atari',
-		genre: 'multi-directional shooter',
-		max_players: 2,
-		url: 'https://en.wikipedia.org/wiki/Asteroids_(video_game)'
-	},
-	{
-		id: 3,
-		title: 'Defender',
-		year: 1981,
-		manufacturer: 'Williams',
-		genre: 'scrolling shooter',
-		max_players: 2,
-		url: 'https://en.wikipedia.org/wiki/Defender_(video_game)'
-	},
-	{
-		id: 4,
-		title: "Rush'n'Attack",
-		year: 1985,
-		manufacturer: 'Konami',
-		genre: 'run and gun',
-		max_players: 2,
-		url: 'https://en.wikipedia.org/wiki/Rush%27n_Attack'
-	},
-	{
-		id: 5,
-		title: 'Sinistar',
-		year: 1982,
-		manufacturer: 'Williams',
-		genre: 'scrolling shooter',
-		max_players: 2,
-		url: 'https://en.wikipedia.org/wiki/Sinistar'
-	},
-	{
-		id: 6,
-		title: 'Skate or Die!',
-		year: 1988,
-		manufacturer: 'Electronic Arts',
-		genre: 'skateboarding',
-		max_players: 1,
-		url: 'https://en.wikipedia.org/wiki/Skate_or_Die!'
-	}
+console.log('********** Exercise 1 of 4 **********');
+const unimaginativeArray = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+// Write a "for" loop that console.log()'s the "zeroeth"
+// value in the unimaginitiveArray, and thereafter every
+// third value of the unimaginativeArray, i.e. 0, 3, 6,
+// and 9: the zeroth, third, sixth, and ninth values.
+// What is "zeroeth"? Has the word "first" become
+// ambiguous now that I am a computer scientist? (Hint: yes).
+for (let i = 0; i < unimaginativeArray.length; i += 3) {
+	console.log(unimaginativeArray[i]);
+}
+
+console.log('\n********** Exercise 2 of 4 **********');
+const nameArray = [
+	'Jacquelynn',
+	'Csaba',
+	'Ellen',
+	'Moises',
+	'Cole',
+	'Jeff',
+	"Dre'Sean"
 ];
+// Write a console.log() that displays the last value in
+// nameArray. Use the `.length` property of array's
+// to access the last value. What's going on with that
+// slash in Dre'Sean's name?
+console.log(nameArray[nameArray.length - 1]);
 
-// Don't modify this function
-function titleMfrYearString(arr, index) {
-	return `${arr[index].title} was made by ${arr[index].manufacturer} in ${
-		arr[index].year
-	}`;
+console.log('\n********** Exercise 3 of 4 **********');
+const adjectiveArray = [
+	'awesome',
+	'fantastic',
+	'amazing',
+	'wonderful',
+	'fabulous',
+	'incredible',
+	'marvelous'
+];
+// Using both nameArray and adjectiveArray, make a
+// "for" loop that console.log()'s a sentence for each
+// corresponding value in the arrays. Use the string "is"
+// to combine the name with the adjective. For example:
+// "Jacquelynn is awesome"
+// "Csaba is fantastic" et cetera...
+for (let i = 0; i < adjectiveArray.length; i++) {
+	console.log(`${nameArray[i]} is ${adjectiveArray[i]}`);
 }
 
-// * Solution code
-function whoMadeWhatWhen(arr, mfrStr, cb) {
-	let result = [];
-	for (let i = 0; i < arr.length; i += 1) {
-		if (arr[i].manufacturer === mfrStr) {
-			result.push(cb(arr, i));
-		}
-	}
-
-	return result.length > 0
-		? result
-		: `We don't have anything by ${mfrStr} in our inventory`;
+console.log('\n********** Exercise 4 of 4 **********');
+// Write a "for" loop that console.log()'s every third
+// number in unimaginativeArray but initialize the
+// iterator so it doesn't console.log() the zero.
+for (let i = 3; i < unimaginativeArray.length; i += 3) {
+	console.log(unimaginativeArray[i]);
 }
 
-console.log(whoMadeWhatWhen(arcadeGames, 'Williams', titleMfrYearString));
+/* SELF-STUDY QUESTION
+1. What do you think is going on with those slashes in the strings?
+2. What does the \n do in the Exercise titles?
+3. What does the \ do in Dre'Sean's name?
+
+Search the internet for "JS String" or "MDN String" and write a
+brief answer below. MDN is the acronym for the Mozilla Developer
+Network. They've got great documentation for JavaScript!
+
+Write your answers in here:
+1.
+
+2.
+
+3.
+
+*/
