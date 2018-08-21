@@ -1,8 +1,10 @@
-// Compute the exponential function at any given complex number, accurate to
-// at least 1 in 10^-12.
+/* Instructions:
+Compute the exponential function at any given complex number, accurate to
+at least 1 in 10^-12.
+*/
 
 function exp([a, b]) {
-  return [Math.exp(a) * Math.cos(b), Math.exp(a) * Math.sin(b)];
+	return [Math.exp(a) * Math.cos(b), Math.exp(a) * Math.sin(b)];
 }
 
 exp([3, 0]);
