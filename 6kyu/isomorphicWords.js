@@ -1,33 +1,36 @@
-// Two strings a and b are called isomorphic if there is a one to one mapping
-// possible for every character of a to every character of b. And all occurrences
-// of every character in a map to same character in b.
-// Task
+/* Instructions
+Two strings a and b are called isomorphic if there is a one to one mapping
+possible for every character of a to every character of b. And all occurrences
+of every character in a map to same character in b.
+Task
 
-// In this kata you will create a function that return True if two given strings
-// are isomorphic to each other, and False otherwise. Remember that order is
-// important.
+In this kata you will create a function that return True if two given strings
+are isomorphic to each other, and False otherwise. Remember that order is
+important.
 
 
-// Your solution must be able to handle words with more than 10 characters.
-// Example
+Your solution must be able to handle words with more than 10 characters.
+Example
 
-// True:
+True:
 
-// CBAABC DEFFED
-// XXX YYY
-// RAMBUNCTIOUSLY THERMODYNAMICS
+CBAABC DEFFED
+XXX YYY
+RAMBUNCTIOUSLY THERMODYNAMICS
 
-// False:
+False:
 
-// AB CC
-// XXY XYY
-// ABAB CD
+AB CC
+XXY XYY
+ABAB CD
+*/
 
 function isomorph(a, b) {
-  if (a.length !== b.length) return false;
-  const isoA = a.split('').map((i, _, arr) => arr.indexOf(i));
-  const isoB = b.split('').map((i, _, arr) => arr.indexOf(i));
-  return isoA.every((i, idx, arr) => arr.indexOf(i) === isoB[idx]);
+	if (a.length !== b.length) return false;
+	// ! Make this D.R.Y
+	const isoA = a.split('').map((i, _, arr) => arr.indexOf(i));
+	const isoB = b.split('').map((i, _, arr) => arr.indexOf(i));
+	return isoA.every((i, idx, arr) => arr.indexOf(i) === isoB[idx]);
 }
 
 // CodeWars solution
@@ -36,7 +39,7 @@ function isomorph(a, b) {
 // }
 
 console.log(isomorph('ESTATE', 'DUELED')); //  true)
-isomorph('XXX', 'YYY'); //  true)
-isomorph('SEE', 'SAW'); //  false)
-isomorph('XXY', 'XYY'); //  false)
-isomorph('abcdefghijk', 'abcdefghijba'); //  false);
+console.log(isomorph('XXX', 'YYY')); //  true)
+console.log(isomorph('SEE', 'SAW')); //  false)
+console.log(isomorph('XXY', 'XYY')); //  false)
+consoleo.log(isomorph('abcdefghijk', 'abcdefghijba')); //  false);
