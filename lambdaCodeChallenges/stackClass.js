@@ -30,6 +30,22 @@ There are no items in your Stack.
 []
 There are no items in your Stack.
 */
+// Input/Output matching using class keyword
 class Stack {
-  
+	constructor() {
+		this.storage = [];
+	}
+	add(item) {
+		this.storage.push(item);
+	}
+	remove() {
+		return this.storage.pop();
+	}
+	// top/peak
+	numOfItems() {
+		if (this.storage.length === 0) {
+			return `There are no items in your ${this.constructor.name}.`;
+		}
+		return this.storage.length;
+	}
 }
