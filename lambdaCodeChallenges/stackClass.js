@@ -49,3 +49,5 @@ class Stack {
 		return this.storage.length;
 	}
 }
+
+document;
