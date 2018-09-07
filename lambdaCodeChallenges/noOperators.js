@@ -1,11 +1,11 @@
 function negCheck(num1, num2) {
 	const arr = [false];
 	if (num1 < 0) {
-		arr[0] = !arr[0];
-		arr.push(0 - num1);
+		arr[0] = !arr[0]; // set to true (will return a negative prod/quot/rem)
+		arr.push(0 - num1); // 0 - -num1 => num1 becomes positive
 	} else {
-		arr.push(num1);
-	}
+		arr.push(num1); // just push the positive number
+	} // could break this out into helper function (D.R.Y)
 	if (num2 < 0) {
 		arr[0] = !arr[0];
 		arr.push(0 - num2);
@@ -19,10 +19,10 @@ function multiply(x, y) {
 	const arr = negCheck(x, y);
 	let answer = 0;
 	for (var i = 0; i < arr[2]; i++) {
-		answer += arr[1];
+		answer += arr[1]; // building up product while 0 < arr[2] add arr[i] to answer
 	}
-	if (arr[0]) answer = 0 - answer;
-	return answer;
+	if (arr[0]) answer = 0 - answer; // if we have a negative num make the product negative
+	return answer; // otherwise return product
 }
 
 function divide(x, y) {
