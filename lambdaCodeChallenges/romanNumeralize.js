@@ -41,17 +41,19 @@ function romanNumeralize(number) {
 	// 	}
 	// }
 
-	for (let i = 0; i < Object.keys(data).length; i++) {
+	const symbols = Object.keys(data);
+	const values = Object.values(data);
+
+	for (let i = 0; i < symbols.length; i++) {
 		if (number < 1) return '';
-		if (number >= Object.values(data)[i]) {
+		if (number >= values[i]) {
 			// M + romanNumeralize(1990 - 1000)
 			// MCM + romanNumeralize(990 - 900)...
-			return (
-				Object.keys(data)[i] + romanNumeralize(number - Object.values(data)[i])
-			);
+			// MCMXC + romanNumeralize(90 -90)...base case reached return
+			return symbols[i] + romanNumeralize(number - values[i]);
 		}
 	}
 }
 
-console.log(romanNumeralize(1990));
-console.log(romanNumeralize(1973));
+console.log(romanNumeralize(1990)); // MCMXC
+console.log(romanNumeralize(1973)); // MCMLXXIII
