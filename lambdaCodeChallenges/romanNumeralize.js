@@ -1,4 +1,4 @@
-function romanNumeralize(number) {
+function romanNumeralize(n) {
 	const data = {
 		M: 1000,
 		CM: 900,
@@ -15,42 +15,16 @@ function romanNumeralize(number) {
 		I: 1
 	};
 
-	const decimals = [1000, 900, 500, 400, 100, 90, 50, 40, 10, 9, 5, 4, 1];
-	const numerals = [
-		'M',
-		'CM',
-		'D',
-		'CD',
-		'C',
-		'XC',
-		'L',
-		'XL',
-		'X',
-		'IX',
-		'V',
-		'IV',
-		'I'
-	];
-
-	// for (let i = 0; i < decimals.length; i++) {
-	// 	if (number < 1) return '';
-	// 	if (number >= decimals[i]) {
-	// 		// M + romanNumeralize(1990 - 1000)
-	// 		// MCM + romanNumeralize(990 - 900)...
-	// 		return numerals[i] + romanNumeralize(number - decimals[i]);
-	// 	}
-	// }
-
 	const symbols = Object.keys(data);
 	const values = Object.values(data);
 
 	for (let i = 0; i < symbols.length; i++) {
-		if (number < 1) return '';
-		if (number >= values[i]) {
+		if (n < 1) return '';
+		if (n >= values[i]) {
 			// M + romanNumeralize(1990 - 1000)
 			// MCM + romanNumeralize(990 - 900)...
 			// MCMXC + romanNumeralize(90 -90)...base case reached return
-			return symbols[i] + romanNumeralize(number - values[i]);
+			return symbols[i] + romanNumeralize(n - values[i]);
 		}
 	}
 }

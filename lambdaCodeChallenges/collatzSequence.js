@@ -10,10 +10,12 @@
 // (Bold signifies odd numbers).
 
 function collatzSequence(n) {
-  const sequence = (n) => {
-    return n === 1 ? [1] : ([n].concat(sequence(n % 2 === 0 ? n / 2 : n * 3 + 1 )));
-  };
-  return sequence(n);
+	const sequence = n => {
+		return n === 1
+			? [1]
+			: [n].concat(sequence(n % 2 === 0 ? n / 2 : n * 3 + 1));
+	};
+	return sequence(n);
 }
 
 console.log(collatzSequence(23));

@@ -32,4 +32,23 @@ const phoneDigitsToLetters = {
 	9: 'WXYZ'
 };
 
-function telephoneWords(str) {}
+function telephoneWords(str) {
+	const words = [];
+
+	function innerRecurse(currentWord, index) {
+		if (currentWord.length === str.length) {
+			words.push(currentWord);
+			return;
+		}
+
+		const currentLetters = phoneDigitsToLetters[str[index]];
+
+		for (let i = 0; i < currentLetters.length; i++) {
+			innerRecurse(currentWord + currentLetters[i], index + 1);
+		}
+	}
+	innerRecurse('', 0);
+	return words;
+}
+
+console.log(telephoneWords('234'));
