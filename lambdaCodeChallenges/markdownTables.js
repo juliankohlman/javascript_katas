@@ -1,7 +1,8 @@
+// ['name,email', 'emily,emily@email.com', 'mary,maryberry@gbbs.co.uk'];
 function markdownTables(arr) {
-	arr.unshift(arr[0]);
+	arr.unshift(arr[0]); // Table headings
 	// [] character set
-	// \w match alpha chars
+	// \w match alpha chars (letters)
 	// + 1 or more times
 	// global
 	// ignore case
@@ -10,10 +11,16 @@ function markdownTables(arr) {
 		.split(',')
 		.join('|');
 
-	let table = arr.map(s => `|${s}`.replace(/,/, '|') + '|').join('\n');
+	let table = arr.map(row => `|${row}`.replace(/,/, '|') + '|').join('\n');
 	console.log(table);
 	return table;
 }
+/*
+| name | email |
+| ----| -----|
+| emily | emily@email.com|
+| mary | maryberry@gbbs.co.uk|
+*/
 
 /* Updated solution
 function markdownTables(arr) {

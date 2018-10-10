@@ -26,20 +26,20 @@ let deep = {
 breadthFirstSearch(deep, 16); will return true.
 breadthFirstSearch(deep, 'c'); will return true.
 */
-function breadthFirstSearch(obj, searchTerm) {}
-
-/*
 function breadthFirstSearch(obj, searchTerm) {
-  // console.log(obj);
-  let q = Object.values(obj);
-  // console.log(q);
-  while (q.length > 0) {
-    let value = q.shift();
-    // console.log(value);
-    if (value === searchTerm) return true;
-    if (typeof value === 'object' ) q = q.concat(Object.values(value));
-    // console.log(q);
-  }
-  return false;
+	// console.log(obj);
+	let haystack = Object.values(obj);
+	// console.log(haystack);
+	while (haystack.length > 0) {
+		let value = haystack.shift();
+		// console.log(value);
+		if (value === searchTerm) return true;
+		if (typeof value === 'object')
+			haystack = haystack.concat(Object.values(value));
+		// console.log(q);
+	}
+	return false;
 }
-*/
+
+breadthFirstSearch(deep, 16); // will return true.
+breadthFirstSearch(deep, 'c'); // will return true.
