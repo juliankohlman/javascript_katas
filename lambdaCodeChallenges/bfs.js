@@ -26,6 +26,13 @@ let deep = {
 breadthFirstSearch(deep, 16); will return true.
 breadthFirstSearch(deep, 'c'); will return true.
 */
+let deep = {
+	1: 2,
+	3: { 4: 'a', b: 'c' },
+	5: { 6: { 7: 8 } },
+	9: { 10: { 11: { 12: { 13: { 14: { 15: 16 } } } } } }
+};
+
 function breadthFirstSearch(obj, searchTerm) {
 	// console.log(obj);
 	let haystack = Object.values(obj);
@@ -36,10 +43,11 @@ function breadthFirstSearch(obj, searchTerm) {
 		if (value === searchTerm) return true;
 		if (typeof value === 'object')
 			haystack = haystack.concat(Object.values(value));
-		// console.log(q);
+		console.log('Value:', value);
+		console.log('Haystack:', haystack);
 	}
 	return false;
 }
 
-breadthFirstSearch(deep, 16); // will return true.
-breadthFirstSearch(deep, 'c'); // will return true.
+// console.log(breadthFirstSearch(deep, 16)); // will return true.
+console.log(breadthFirstSearch(deep, 'c')); // will return true.
