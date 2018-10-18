@@ -21,12 +21,12 @@ sumOfDigits(496) returns 19 because 4 + 9 + 6 = 19
 // }
 
 // Version 1.1 //
-// --------- //
+// ----------- //
 function sumOfDigits(num) {
 	let sum = 0;
 	num
-		.toString()
-		.split('')
+		.toString() // convert num to string
+		.split('') // returns array of chars
 		.forEach(element => {
 			sum += +element;
 		});
