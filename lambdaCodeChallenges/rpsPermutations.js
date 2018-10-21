@@ -14,9 +14,9 @@ function rockPaperScissors(n) {
   // for (let i = 0; i < outputLength; i++) {
   //  result.push(rpsSet)
   // }
-  let rpsArr = [ ['rock'], ['paper'], ['scissors'] ];
+  const rpsArr = [ ['rock'], ['paper'], ['scissors'] ];
   if (n === 1) return rpsArr;
-  let result = [];
+  const result = [];
   for (let i = 0; i <= n; i++) {
     for (let j = 0; j <= rpsArr.length; j++) {
       result.push([rpsArr[j],rpsArr[i]]);
