@@ -10,6 +10,8 @@ function moneyFormat(float) {
 		.toFixed(2)
 		.toString()
 		.replace(/\B(?=(\d{3})+(?!\d))/g, ',')}`;
+	//  \B not word boundary (.)
+	// (?=) Matches a group after the main expression without including it in the result.
 }
 
 moneyFormat(2310000.159879);
