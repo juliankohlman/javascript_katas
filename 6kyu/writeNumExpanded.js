@@ -10,9 +10,11 @@
 
 function expandedForm(num) {
 	let digits = (num + '').split('').map(i => +i);
+	console.log(digits);
 	let results = [];
 	digits.forEach((digit, idx) => {
 		if (digits[idx] !== 0)
+			// determining how many 0s to non-zero digits based on position in array and length of array
 			results.push(digits[idx] + '0'.repeat(digits.length - 1 - idx));
 	});
 	console.log(results.join(' + '));
