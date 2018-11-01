@@ -9,10 +9,15 @@
 // NOTE: All numbers will be whole numbers greater than 0.
 
 function expandedForm(num) {
-  let digits = (num + '').split('').map(i => +i);
-  let results = [];
-  digits.forEach((digit,idx) => {
-    if (digits[idx] !== 0) results.push(digits[idx] + '0'.repeat((digits.length - 1) - idx));
-  });
-  return results.filter(i => +i !== 0).join(' + ')
+	let digits = (num + '').split('').map(i => +i);
+	let results = [];
+	digits.forEach((digit, idx) => {
+		if (digits[idx] !== 0)
+			results.push(digits[idx] + '0'.repeat(digits.length - 1 - idx));
+	});
+	console.log(results.join(' + '));
+	return results.join(' + ');
+	// return results.filter(i => +i !== 0).join(' + ');
 }
+
+console.log(expandedForm(70304));
