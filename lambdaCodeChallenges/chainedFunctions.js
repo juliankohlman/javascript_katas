@@ -21,7 +21,13 @@ Note the order in which functions a(), b(), c(), and d() are invoked within the 
 */
 
 function chainedFunctions(arr) {
-	console.log(arr);
+	return x => {
+		arr.forEach(f => {
+			x = f(x);
+			console.log(x);
+		});
+		return x;
+	};
 }
 
 function a(x) {

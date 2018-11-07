@@ -8,19 +8,34 @@
 //  [scissors, paper], [scissors, scissors]];
 
 function rockPaperScissors(n) {
-	const outputLength = Math.pow(n, 3);
-	let rpsSet = new Set([[rock], [paper], [scissors]]);
-	let result = [];
-	for (let i = 0; i < outputLength; i++) {
-		result.push(rpsSet);
-	}
-	// const rpsArr = [ ['rock'], ['paper'], ['scissors'] ];
-	// if (n === 1) return rpsArr;
-	// const result = [];
-	// for (let i = 0; i <= n; i++) {
-	//   for (let j = 0; j <= rpsArr.length; j++) {
-	//     result.push([rpsArr[j],rpsArr[i]]);
-	//   }
-	// }
-	// return result;
+	const rounds = n; // our input (n length combinations)
+	const results = []; // store all n length possibilities
+	const weapons = ['rock', 'paper', 'scissors']; // items
+
+	const recurse = function(roundsLeft, played) {
+		// base case no rounds left to play
+		// callstack returns and 'played values' get pushed into results and we return.
+		if (roundsLeft === 0) {
+			results.push(played);
+			return;
+		}
+		// console.log('results: ', results);
+		// console.log('played: ', played);
+
+		// recursive case
+		for (let i = 0; i < weapons.length; i++) {
+			const current = weapons[i];
+			// console.log('played inside recurse', played);
+			// console.log('roundsLeft', roundsLeft);
+
+			// altering inputs to recurse() otherwise => blown callstack
+			recurse(roundsLeft - 1, played.concat(current));
+		}
+	};
+
+	recurse(rounds, []);
+
+	return results;
 }
+
+console.log(rockPaperScissors(2));
