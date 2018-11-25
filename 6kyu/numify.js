@@ -11,10 +11,7 @@ arr.join() === 'seven,eight';
 arr.sort((a,b)=> b-a).join() === 'eight,seven';
 */
 
-// ! Work in progress
 function Word2Num(str) {
-	let num = str.split();
-	console.log(str);
 	const data = {
 		one: 1,
 		two: 2,
@@ -27,8 +24,6 @@ function Word2Num(str) {
 		nine: 9,
 		ten: 10
 	};
-	//   console.log(Object.keys(data))
-	//   console.log(str)
-	return str.split(',');
-	//   return data[str];
+	console.log(str.length);
+	return data[str];
 }
