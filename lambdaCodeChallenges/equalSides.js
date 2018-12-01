@@ -15,28 +15,44 @@
 
 // If the array can't be split into equal sides, return -1.
 
-function equalSides (arr) {
-  let sideA = [];
-  let sideB = [];
-  for (let i = 0; i < arr.length; i++) {
-    if (arr[i] <= arr[i + 1]) {
-      sideA.push(arr[i]);
-    } else if (arr[i] > arr[i + 1]) {
-      sideB.push(arr[i]);
-    }
-  }
-  sideB.push(arr[arr.length - 1])
-  let root = arr.indexOf(sideB.shift());
-  console.log(root);
+function equalSides(arr) {
+	let sideA = [];
+	let sideB = [];
+	for (let i = 0; i < arr.length; i++) {
+		if (arr[i] <= arr[i + 1]) {
+			sideA.push(arr[i]);
+		} else if (arr[i] > arr[i + 1]) {
+			sideB.push(arr[i]);
+		}
+	}
+	sideB.push(arr[arr.length - 1]);
+	let root = arr.indexOf(sideB.shift());
+	console.log(root);
 
-  let a = sideA.reduce((a,b) => a + b);
-  console.log(a)
+	let a = sideA.reduce((a, b) => a + b);
+	console.log(a);
 
-  let b = sideB.reduce((a,b) => a + b);
-  console.log(a === b)
+	let b = sideB.reduce((a, b) => a + b);
+	console.log(a === b);
 
-  return a === b ? root : -1;
-
+	return a === b ? root : -1;
 }
-equalSides([1,2,3,4,3,2,1]);
-equalSides([1,1,1,4,2,1]);
+
+// * Model solution * //
+function equalSides(arr) {
+	function reduceSide(side) {
+		return side.reduce(function(result, currentNum, index, side) {
+			return result + currentNum;
+		}, 0);
+	}
+	for (var i = 1; i < arr.length; i++) {
+		var a = arr.slice(0, i);
+		var b = arr.slice(i + 1, arr.length);
+		if (reduceSide(a) === reduceSide(b)) {
+			return i;
+		}
+	}
+	return -1;
+}
+equalSides([1, 2, 3, 4, 3, 2, 1]);
+equalSides([1, 1, 1, 4, 2, 1]);

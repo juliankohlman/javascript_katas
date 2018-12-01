@@ -10,7 +10,7 @@ arr.join() === 'seven,eight';
 
 arr.sort((a,b)=> b-a).join() === 'eight,seven';
 */
-
+// * SOLVE IT ON PAPER FIRST. *//
 function Word2Num(str) {
 	const data = {
 		one: 1,
