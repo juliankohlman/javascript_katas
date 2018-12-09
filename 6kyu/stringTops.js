@@ -21,37 +21,37 @@
 // The input strings may be very long. Make sure your solution has good performance.
 
 function tops(msg) {
-  console.log(msg[1]);
-  if (msg === '') return '';
-  if (msg.length === 2) return msg[1];
+	console.log(msg[1]);
+	if (msg === '') return '';
+	if (msg.length === 2) return msg[1];
 
-//     let res = [];
-//   let len = msg.length
-//   let otherOdds = [];
-//   for (let j = 0 ;j += 1;) {
-//     let oddNum = 4 * j - 3
-//     if (oddNum > (msg.length / 2)) break;
-//     otherOdds.push(oddNum)
-//   }
-//   console.log(otherOdds);
-//   for (let i = 0; i < otherOdds.length; i += 1) {
-//     res.unshift(msg.indexOf(otherOdds[i]))
-//     if (res.length >= 1) {
-//       let lastNum = otherOdds.indexOf(res.length - 1);
-//       res.unshift(msg.indexOf(otherOdds[i] + res.findIndex(lastNum)))
-//     }
-//   }
-//   console.log(res);
-// //   otherOdds.slice(1).forEach(function(i,idx,col) {
-// //     let last = 0;
-// //     res.unshift(msg.indexOf(res[last]) + msg.indexOf(i))
-// //     last += 1;
-// //   });
+	//     let res = [];
+	//   let len = msg.length
+	//   let otherOdds = [];
+	//   for (let j = 0 ;j += 1;) {
+	//     let oddNum = 4 * j - 3
+	//     if (oddNum > (msg.length / 2)) break;
+	//     otherOdds.push(oddNum)
+	//   }
+	//   console.log(otherOdds);
+	//   for (let i = 0; i < otherOdds.length; i += 1) {
+	//     res.unshift(msg.indexOf(otherOdds[i]))
+	//     if (res.length >= 1) {
+	//       let lastNum = otherOdds.indexOf(res.length - 1);
+	//       res.unshift(msg.indexOf(otherOdds[i] + res.findIndex(lastNum)))
+	//     }
+	//   }
+	//   console.log(res);
+	// //   otherOdds.slice(1).forEach(function(i,idx,col) {
+	// //     let last = 0;
+	// //     res.unshift(msg.indexOf(res[last]) + msg.indexOf(i))
+	// //     last += 1;
+	// //   });
 
-// //   return res;
+	// //   return res;
 }
 
-tops('') );
-tops('12') );
-tops('abcdefghijklmnopqrstuvwxyz12345'));
-tops('abcdefghijklmnopqrstuvwxyz1236789ABCDEFGHIJKLMN'));
+console.log(tops(''));
+console.log(tops('12'));
+console.log(tops('abcdefghijklmnopqrstuvwxyz12345'));
+console.log(tops('abcdefghijklmnopqrstuvwxyz1236789ABCDEFGHIJKLMN'));
