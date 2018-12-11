@@ -24,7 +24,7 @@ function tops(msg) {
 	console.log(msg[1]);
 	if (msg === '') return '';
 	if (msg.length === 2) return msg[1];
-
+	// return msg.length === '' ? '' : msg.length === 2 ? msg[1] : null
 	//     let res = [];
 	//   let len = msg.length
 	//   let otherOdds = [];
