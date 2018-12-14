@@ -12,16 +12,17 @@
 
 //  What's the time complexity of your algorithm?  Are there ways you can improve it?
 
-function bubbleSort (arr) {
-  let sorted = false;
-  while (!sorted) {
-    sorted = true;
-    for (let i = 0; i < arr.length; i++) {
-      if (arr[i + 1] < arr[i]) {
-        sorted = false;
-        [arr[i + 1], arr[i]] = [arr[i], arr[i + 1]];
-      }
-    }
-  }
-  return arr;
+function bubbleSort(arr) {
+	let sorted = false; // flag variable
+	while (!sorted) {
+		sorted = true;
+		for (let i = 0; i < arr.length; i++) {
+			if (arr[i + 1] < arr[i]) {
+				//compare neighboring values
+				sorted = false;
+				[arr[i + 1], arr[i]] = [arr[i], arr[i + 1]]; //make value swap
+			}
+		}
+	}
+	return arr;
 }
