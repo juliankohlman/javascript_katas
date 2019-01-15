@@ -26,6 +26,15 @@ Guaranteed constraints:
 The element in a that occurs in the array more than once and has the minimal index for its second occurrence. If there are no such elements, return -1.
  */
 
-function firstDuplicate(a) {}
+function firstDuplicate(a) {
+	const itemCount = {};
+	for (let i = 0; i < a.length; i++) {
+		!itemCount.hasOwnProperty(a[i])
+			? (itemCount[a[i]] = 1)
+			: (itemCount[a[i]] += 1);
+		if (itemCount[a[i]] === 2) return a[i];
+	}
+	return -1;
+}
 
-firstDuplicate([2, 1, 3, 5, 3, 2]);
+console.log(firstDuplicate([2, 1, 3, 5, 3, 2]));
