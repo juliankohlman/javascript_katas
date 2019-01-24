@@ -31,9 +31,11 @@ function rotateImage(a) {
 	const len = a.length - 1;
 	// clockwise a[len - j][i]
 	const rotated = a.map((row, i) => row.map((val, j) => a[j][len - i]));
-	a.length = 0;
-	a.push(...rotated);
-	return a;
+	// console.log(rotated);
+	return rotated;
+	// a.length = 0;
+	// a.push(...rotated);
+	// return a;
 }
 
 // function rotateImage(arr) {
@@ -58,3 +60,5 @@ console.log(
 		[5, 5, 9, 3, 3]
 	])
 );
+
+console.log(rotateImage([[1, 2], [3, 4]]));
