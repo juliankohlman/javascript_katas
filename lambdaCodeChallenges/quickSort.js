@@ -11,6 +11,7 @@ function quickSort(nums) {
   const pivots = nums.filter(n => n == pivotValue);
 
   // DRY
+  // this can be accomplished with a for loop
   const belowPivot = nums.filter(x => x < pivotValue).sort((a,b) => a - b);
   const abovePivot = nums.filter(x => x > pivotValue).sort((a,b) => a - b);
 
