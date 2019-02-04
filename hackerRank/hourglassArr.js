@@ -22,9 +22,9 @@ function hourglassSum(arr) {
 			hourglasses.push([a, b, c, d, e, f, g]);
 		}
 	}
-	let result = hourglasses.map(nums => {
-		return nums.reduce((curr, next) => curr + next);
-	});
+	let result = hourglasses.map(nums =>
+		nums.reduce((curr, next) => curr + next)
+	);
 	return Math.max(...result);
 }
 
