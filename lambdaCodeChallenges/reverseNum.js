@@ -21,3 +21,15 @@ function reverseNumber(n) {
 		.reverse()
 		.join('');
 }
+
+const negNum = x => {
+	res = x
+		.toString()
+		.split('')
+		.reverse();
+	res.pop();
+
+	return -+res.join('');
+};
+
+console.log(negNum(-1234));
