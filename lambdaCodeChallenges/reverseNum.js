@@ -33,3 +33,4 @@ const negNum = x => {
 };
 
 console.log(negNum(-1234));
+console.log(negNum(-77893));
