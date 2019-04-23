@@ -16,3 +16,5 @@ function rotLeft(a, d) {
 }
 
 console.log(rotLeft([1, 2, 3, 4, 5], 4));
+console.log(rotLeft([1, 2, 3, 4, 5], 3));
+console.log(rotLeft([1, 2, 3, 4, 5], 2));
