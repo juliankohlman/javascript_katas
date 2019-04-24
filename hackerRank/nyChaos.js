@@ -6,6 +6,8 @@ function minimumBribes(q) {
 	// create initial ordered queue
 	// [1, 2, 3, 4, 5]
 	// [2, 1, 5, 3, 4]
+	//Todo refactor and get last test cases passing
+	console.time('elapsed');
 	let initialQ = q.slice().sort();
 	let bribes = 0;
 	let tooChaotic = null;
@@ -19,9 +21,13 @@ function minimumBribes(q) {
 			bribes += initialQ.indexOf(person) - q.indexOf(person);
 		}
 	});
-	return tooChaotic ? 'Too Chaotic' : bribes;
+	console.timeEnd('elapsed');
+	// must use console.log(answer for hackerank)
+	return tooChaotic ? 'Too chaotic' : bribes;
 	// return bribes;
 }
 
-console.log(minimumBribes([2, 1, 5, 3, 4]));
-console.log(minimumBribes([2, 5, 1, 3, 4]));
+// console.log(minimumBribes([2, 1, 5, 3, 4])); // 3
+console.log(minimumBribes([2, 5, 1, 3, 4])); // too chaotic
+// console.log(minimumBribes([5, 1, 2, 3, 7, 8, 6, 4])); // too chaotic
+// console.log(minimumBribes([1, 2, 5, 3, 7, 8, 6, 4])); // 7
