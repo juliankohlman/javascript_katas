@@ -17,4 +17,6 @@ The first line consists of two space-separated integers, n and m.
 The second line contains m space-separated integers, the indices of each city having a space-station. These values are unordered and unique.
  */
 
-function flatlandSpaceStations(n, c) {}
+function flatlandSpaceStations(n, c) {
+	console.log(n);
+}
