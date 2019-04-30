@@ -10,7 +10,7 @@ Complete the flatlandSpaceStations function in the editor below. It should retur
 flatlandSpaceStations has the following parameter(s):
 
 n: the number of cities
-c: an integer array that contains the indices of cities with a space station, 1-based indexing
+c: an integer array that contains the indices of cities with a space station, 0-based indexing
 Input Format
 
 The first line consists of two space-separated integers, n and m. 
@@ -20,3 +20,6 @@ The second line contains m space-separated integers, the indices of each city ha
 function flatlandSpaceStations(n, c) {
 	console.log(n);
 }
+
+console.log(flatlandSpaceStations(5, [0, 4]));
+console.log(flatlandSpaceStations(6, [0, 1, 2, 3, 4, 5]));
