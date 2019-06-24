@@ -22,4 +22,13 @@ The characters in J are distinct.
  * @param {string} S
  * @return {number}
  */
-var numJewelsInStones = function(J, S) {};
+const numJewelsInStones = function(J, S) {
+	let stonesAndJewels = 0;
+	for (const s of S) {
+		if (J.toString().match(s)) stonesAndJewels += 1;
+	}
+	return stonesAndJewels;
+};
+
+console.log(numJewelsInStones('aA', 'aAAbbbb'));
+console.log(numJewelsInStones('z', 'ZZ'));
