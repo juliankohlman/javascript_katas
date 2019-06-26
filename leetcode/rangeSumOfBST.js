@@ -4,14 +4,7 @@
  *     this.val = val;
  *     this.left = this.right = null;
  * }
- */
-/**
- * @param {TreeNode} root
- * @param {number} L
- * @param {number} R
- * @return {number}
- */
-const rangeSumBST = function(root, L, R) {
+ * const rangeSumBST = function(root, L, R) {
 	if (root) {
 		rangeSumBST(root.left, L, R);
 		console.log(root.val);
@@ -19,8 +12,14 @@ const rangeSumBST = function(root, L, R) {
 		rangeSumBST(root.right, L, R);
 	}
 };
+ */
+/**
+ * @param {TreeNode} root
+ * @param {number} L
+ * @param {number} R
+ * @return {number}
+ */
 
-/*
 let sum;
 
 let rangeSumBST = function(root, L, R) {
@@ -42,5 +41,3 @@ let dfs = function(root, L, R) {
 		}
 	}
 };
-
-*/
