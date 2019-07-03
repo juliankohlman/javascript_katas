@@ -40,4 +40,14 @@ S is a valid parentheses string
  * @param {string} S
  * @return {string}
  */
-const removeOuterParentheses = S => {};
+const removeOuterParentheses = S => {
+	// let s = '';
+	// for (let paren of S) {
+	//     if (s[s.length - 1] !== paren) {
+	//         s += paren
+	//     }
+	//     // console.log(s)
+	// }
+	// console.log(s)
+	// return s
+};
