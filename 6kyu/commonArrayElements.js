@@ -13,6 +13,9 @@ More examples in the test cases.
 
 // ! Work in progress
 function common(a, b, c) {
+	a.forEach(i => {
+		console.log(i);
+	});
 	// create sum variable
 	// create 2 hashes
 	//
