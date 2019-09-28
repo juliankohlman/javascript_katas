@@ -18,4 +18,7 @@ Input Explanation: The intersected node's value is 8 (note that this must not be
 const getIntersectionNode = function(headA, headB) {
   // solve it on paper first
   // absorb the problem and be aware of edge cases and time complexity
+  // iterate over each list
+  // add values to seperate arrays
+  // filter(x => !arr.2.includes(x))[1]
 };
