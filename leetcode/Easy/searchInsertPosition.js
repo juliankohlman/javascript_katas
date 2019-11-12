@@ -43,7 +43,7 @@ const searchInsert = function(nums, target) {
 
     if (target < nums[mid]) {
       high = mid - 1;
-      if (low === high) return low;
+      if (low === high) return low + 1;
     } else if (target > nums[mid]) {
       low = mid + 1;
       if (low === high) return high + 1;
