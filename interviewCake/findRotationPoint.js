@@ -2,6 +2,7 @@ function findRotationPoint(words) {
   //* pseudocode here
   return false;
 }
+//* return 0 if the the array is unrotated
 // Tests
 let smallArray = ["cape", "cake"]; // 1
 let medArray = ["grape", "orange", "plum", "radish", "apple"]; // 4
