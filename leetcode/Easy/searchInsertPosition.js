@@ -31,6 +31,7 @@
  * @return {number}
  */
 const searchInsert = function(nums, target) {
+  //! failing on smaller arrays of length 0,1,2
   if (target === 0) return target;
   let low = 0;
   let mid;
@@ -50,3 +51,4 @@ const searchInsert = function(nums, target) {
     }
   }
 };
+//! Failing with [1], 2 // expected 1 (only passing 36/62)
