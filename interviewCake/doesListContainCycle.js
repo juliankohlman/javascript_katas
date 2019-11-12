@@ -8,29 +8,25 @@ class LinkedListNode {
 // ? How would you detect the first node in the cycle? Define the first node of the cycle as the one closest to the head of the list.
 //* Use a queue to add nodes as they are visited, once we reach a node with a next that has been visited return that value or node. Or call get if using a Set
 
-// ?Would the program always work if the fast runner moves three steps every time the slow runner moves one step?
+// ? Would the program always work if the fast runner moves three steps every time the slow runner moves one step? Yes.
 
 // ? What if instead of a simple linked list, you had a structure where each node could have several "next" nodes? This data structure is called a "directed graph." How would you test if your directed graph had a cycle?
 
 //* Time O(n), space O(n) Not the best solution
 function containsCycle(firstNode) {
-  let hasCycle = false;
   const visitedNodes = new Set();
 
-  // checking for existence of node and a next value
-  // checks handle an empty or single node lists edge cases
   while (firstNode && firstNode.next) {
     // check visitedNode stack for this nodes next value
     if (visitedNodes.has(firstNode.next.value)) {
-      hasCycle = true;
-      break;
+      return true;
     }
     // add current node value to set
     visitedNodes.add(firstNode.value);
     // move to next node
     firstNode = firstNode.next;
   }
-  return hasCycle;
+  return false;
 }
 
 //* Time O(n), space O(1)
