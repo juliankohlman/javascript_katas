@@ -4,7 +4,15 @@ class LinkedListNode {
     this.next = null;
   }
 }
+//! BONUS
+// ? How would you detect the first node in the cycle? Define the first node of the cycle as the one closest to the head of the list.
+//* Use a queue to add nodes as they are visited, once we reach a node with a next that has been visited return that value or node. Or call get if using a Set
 
+// ?Would the program always work if the fast runner moves three steps every time the slow runner moves one step?
+
+// ? What if instead of a simple linked list, you had a structure where each node could have several "next" nodes? This data structure is called a "directed graph." How would you test if your directed graph had a cycle?
+
+//* Time O(n), space O(n) Not the best solution
 function containsCycle(firstNode) {
   let hasCycle = false;
   const visitedNodes = new Set();
@@ -22,6 +30,36 @@ function containsCycle(firstNode) {
     // move to next node
     firstNode = firstNode.next;
   }
+  return hasCycle;
+}
+
+//* Time O(n), space O(1)
+//* Stores constant number of nodes to get space down to O(1)
+//? Difference between looping versus linear list?
+// looping list will never end, whereas a linear list has an end node (Tail)
+//* Create a trailing pointer
+//* Have a fast "runner" move through the list
+//* if they encounter the the slow "runner" before they reach the end of the list we have a cycle otherwise they will hit the end of the list
+//* solution is an example of proof by contradiction
+function containsCycle(firstNode) {
+  let hasCycle = false;
+  let slow = firstNode;
+  let fast = firstNode;
+
+  // advance fast 2 nodes every time slow advances 1 node
+  // using fast pointer to control loop b/c it will reach end if it exists first
+  while (fast && fast.next) {
+    // advance your pointers
+    slow = slow.next; // 1 step
+    fast = fast.next.next; // 2 steps
+
+    // fast is about to lap or pass slow...meaning we have a loop
+    if (slow === fast) {
+      hasCycle = true;
+      break;
+    }
+  }
+
   return hasCycle;
 }
 
