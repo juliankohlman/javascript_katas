@@ -11,18 +11,40 @@ More examples in the test cases.
 */
 
 function common(a, b, c) {
-	// keys count === number of arrays (in this case 3) its common
-	// Todo figure out how to handle duplicate common elements
-	let arrayCounts = {};
-	let allItems = a.concat(b, c);
-	allItems.forEach(element => {
-		arrayCounts[element]
-			? (arrayCounts[element] += 1)
-			: (arrayCounts[element] = 1);
-	});
-	console.log(arrayCounts);
-	console.log(allItems);
+  // keys count === number of arrays (in this case 3) its common
+  // Todo figure out how to handle duplicate common elements
+  let arrayCounts = {};
+  let allItems = a.concat(b, c);
+  allItems.forEach(element => {
+    arrayCounts[element]
+      ? (arrayCounts[element] += 1)
+      : (arrayCounts[element] = 1);
+  });
+  console.log(arrayCounts);
+  console.log(allItems);
 }
 
 common([1, 2, 3], [5, 3, 2], [7, 3, 2]); // 5 because 2 & 3 are common in all 3 arrays
 common([1, 2, 2, 3], [5, 3, 2, 2], [7, 3, 2, 2]); // 7 because 2,2 & 3 are common in the 3 arrays
+
+/*
+const commonElements = (a, b, c) => {
+	let hash = {};
+  let group = a.concat(b,c)
+  let res = [];
+  console.log(group)
+  for (let i = 0; i <= group.length - 1; i++) {
+    if (hash[group[i]]) {
+      hash[group[i]] += 1;
+    } else {
+      hash[group[i]] = 1;
+    }
+  }
+  for (let val in hash) {
+    if (hash[val] % 3 === 0) {
+      res.push(+val);
+    }
+  }
+  return res;
+};
+*/
