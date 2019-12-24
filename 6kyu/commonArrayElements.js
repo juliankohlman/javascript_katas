@@ -10,6 +10,19 @@ Array lengths in random tests run from 5000 to 10000 elements.
 More examples in the test cases.
 */
 
+//* regex solution (very slow/inefficient)
+const regexCommon = (a, b, c) => {
+  let group = a.concat(b, c).sort((a, b) => b - a);
+  let pattern = /[0]{3}|[1]{3}|[2]{3}|[3]{3}|[4]{3}|[5]{3}|[6]{3}|[7]{3}|[8]{3}|[9]{3}|/g;
+  let matches = group
+    .join("")
+    .match(pattern)
+    .filter(i => i !== "");
+  let res = 0;
+  matches.forEach(i => (res += +i[0]));
+  return res;
+};
+
 function common(a, b, c) {
   // keys count === number of arrays (in this case 3) its common
   // Todo figure out how to handle duplicate common elements
