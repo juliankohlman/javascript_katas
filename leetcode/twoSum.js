@@ -17,11 +17,13 @@ return [0, 1].
  * @return {number[]}
  */
 var twoSum = function(nums, target) {
-	for (let i = 0; i < nums.length; i++) {
-		for (let j = i + 1; j <= nums.length; j++) {
-			if (nums[i] + nums[j] === target) {
-				return [i, j];
-			}
-		}
-	}
+  // https://medium.com/@paulrohan/solving-the-classic-two-sum-and-three-sum-problem-in-javascript-7d5d1d47db03
+  // use an object to achieve O(n) time complexity
+  for (let i = 0; i < nums.length; i++) {
+    for (let j = i + 1; j <= nums.length; j++) {
+      if (nums[i] + nums[j] === target) {
+        return [i, j];
+      }
+    }
+  }
 };
