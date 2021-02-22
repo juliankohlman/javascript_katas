@@ -12,6 +12,12 @@ NOTE: All input strings will contain only two words. Spoonerisms can be more com
 
 const spoonerize = (words) => {
   // swap values and return updated string
+  let wordArray = words.split(" ");
+  let temp = wordArray[0][0];
+  let first = wordArray[0].replace(wordArray[0][0], wordArray[1][0]);
+  let second = wordArray[1].replace(wordArray[1][0], temp);
+
+  return `${first} ${second}`;
 };
 
 console.log(spoonerize("nit picking")); //, "pit nicking"
