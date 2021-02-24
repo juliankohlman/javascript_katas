@@ -12,7 +12,11 @@ The arrays may be of different lengths, with at least one character/digit.
 One array will be of string characters (in lower case, a-z), a second of integers (all positive starting at 1).
  */
 
-const mergeArrays = (a, b) => {};
+const mergeArrays = (a, b) => {
+  // pick from a then b
+  // once a or b exhausted
+  // pull items from remaining array and return result
+};
 
 console.log(mergeArrays([1, 2, 3, 4, 5, 6, 7, 8], ["a", "b", "c", "d", "e"]));
 // [1, "a", 2, "b", 3, "c", 4, "d", 5, "e", 6, 7, 8]
