@@ -15,8 +15,10 @@ One array will be of string characters (in lower case, a-z), a second of integer
 const mergeArrays = (a, b) => {
   let result = [];
   let j = 0;
-  for (let i = 0; i < a.length; i++) {
-    result.push(a[i], b[j]);
+  for (let i = 0; i < a.length && b.length; i++) {
+    if (a[i]) result.push(a[i]);
+    if (b[j]) result.push(b[j]);
+    // result.push(a[i], b[j]);
     j++;
     // reached end of a
     if (i === a.length - 1) {
@@ -28,6 +30,7 @@ const mergeArrays = (a, b) => {
   // pick from a then b
   // once a or b exhausted
   // pull items from remaining array and return result
+  return result;
 };
 
 console.log(mergeArrays([1, 2, 3, 4, 5, 6, 7, 8], ["a", "b", "c", "d", "e"]));
