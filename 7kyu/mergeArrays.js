@@ -20,6 +20,8 @@ const mergeArrays = (a, b) => {
       result.push(a[i]);
       i++;
     }
+    // need to add check for reaching end of a or b and then trigger
+    // addition of remaining items to result
     if (b[j]) {
       result.push(b[j]);
       j++;
