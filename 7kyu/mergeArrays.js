@@ -10,24 +10,17 @@ Points:
 
 The arrays may be of different lengths, with at least one character/digit.
 One array will be of string characters (in lower case, a-z), a second of integers (all positive starting at 1).
+Expected: '[24, \'k\', 93, \'n\', 93, \'n\', \'h\', \'l\', \'l\', \'f\']', instead got: '[24, \'k\', 93, \'n\', 93, \'n\']'
+Expected: '[23, \'v\', \'h\', \'c\', \'r\', \'f\', \'o\', \'g\']', instead got: '[23, \'v\']'
  */
 
 const mergeArrays = (a, b) => {
   let result = [];
-  let j = 0;
-  for (let i = 0; i < a.length && b.length; ) {
-    if (a[i]) {
-      result.push(a[i]);
-      i++;
-    }
-    // need to add check for reaching end of a or b and then trigger
-    // addition of remaining items to result
-    if (b[j]) {
-      result.push(b[j]);
-      j++;
-    }
-  }
 
+  while (a.length + b.length > 0) {
+    if (a.length) result.push(a.shift());
+    if (b.length) result.push(b.shift());
+  }
   return result;
 };
 
