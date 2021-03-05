@@ -16,4 +16,12 @@ Provided string will always be lower case, won't be empty and will have no speci
 
 const vowelBack = (s) => {
   // solution here
+  // * use ascii codes to increment letters
+  // * add logic to check for passing z
+  // * add logic to check for passing a
+  // * special cases for c,o,d, and e
 };
+
+console.log(vowelBack("testcase")); //  "tabtbvba"
+console.log(vowelBack("codewars")); //  "bnaafvab"
+console.log(vowelBack("exampletesthere")); //  "agvvyuatabtqaaa"
