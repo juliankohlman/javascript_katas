@@ -16,6 +16,7 @@ Provided string will always be lower case, won't be empty and will have no speci
 
 const vowelBack = (s) => {
   // solution here
+  // create table of a: {ascii, b: ascii}
   // * use ascii codes to increment letters
   // * add logic to check for passing z
   // * add logic to check for passing a
