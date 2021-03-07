@@ -29,6 +29,7 @@ const vowelBack = (s) => {
   // * special cases for c,o,d, and e
   // console.log(letterCodes);
   return s.codePointAt(0);
+  //* process string handle all cases the convert codes back to string
 };
 
 console.log(vowelBack("testcase")); //  "tabtbvba"
