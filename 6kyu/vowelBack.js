@@ -16,11 +16,19 @@ Provided string will always be lower case, won't be empty and will have no speci
 
 const vowelBack = (s) => {
   // solution here
+  let letters = "abcdefghijklmnopqrstuvwxyz";
+  let letterCodes = {};
+  for (const letter of letters) {
+    letterCodes[letter] = letter.charCodeAt(0);
+  }
+
   // create table/Map of {a: ascii, b: ascii}
   // * use ascii codes to increment letters
   // * add logic to check for passing z
   // * add logic to check for passing a
   // * special cases for c,o,d, and e
+  // console.log(letterCodes);
+  return s.codePointAt(0);
 };
 
 console.log(vowelBack("testcase")); //  "tabtbvba"
