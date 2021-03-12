@@ -16,6 +16,7 @@ toTime(323500); // => '89 hour(s) and 51 minute(s)'
 
 const toTime = (seconds) => {
   // convert secont into formatted output
+  return seconds / 60;
 };
 
 console.log(toTime(3600)); //  "1 hour(s) and 0 minute(s)"
