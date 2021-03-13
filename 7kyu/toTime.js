@@ -17,8 +17,11 @@ toTime(323500); // => '89 hour(s) and 51 minute(s)'
 const toTime = (seconds) => {
   // convert secont into formatted output
   let hours = Math.floor(seconds / 3600);
-  console.log((seconds %= 3600));
-  return hours;
+  //* mod assignment operator
+  let allSeconds = (seconds %= 3600);
+  let minutes = Math.floor(allSeconds / 60);
+  // console.log(hours, minutes);
+  return `${hours} hours(s) and ${minutes} minutes(s)`;
 };
 
 console.log(toTime(3600)); //  "1 hour(s) and 0 minute(s)"
