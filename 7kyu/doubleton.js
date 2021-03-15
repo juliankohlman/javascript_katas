@@ -14,6 +14,9 @@ const doubleton = (num) => {
   // otherwise find the next doubleton
   // convert num to string 121 => ['1','2','1']
   // process num array
+  //* iterate over nums array checking for unique nums
+  //? contains exactly TWO distinct digits
+  //* if you reach end of array return joined->then convert to num-> + 1
 };
 
 console.log(doubleton(120)); // === 121
