@@ -17,6 +17,7 @@ const doubleton = (num) => {
   //* iterate over nums array checking for unique nums
   //? contains exactly TWO distinct digits
   //* if you reach end of array return joined->then convert to num-> + 1
+  //? 2 pointer technique???
 };
 
 console.log(doubleton(120)); // === 121
