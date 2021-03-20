@@ -18,7 +18,7 @@ const doubleton = (num) => {
   //? contains exactly TWO distinct digits
   //* if you reach end of array return joined->then convert to num-> + 1
   //? 2 pointer technique???
-  let digits = num.toString().split("");
+  let digits = num.toString().split("").sort();
   //* sort and step through making comparisons??????
   return digits;
 };
