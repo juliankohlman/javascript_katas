@@ -19,6 +19,7 @@ const doubleton = (num) => {
   //* if you reach end of array return joined->then convert to num-> + 1
   //? 2 pointer technique???
   let digits = num.toString().split("").sort();
+  //* if digits are unique return num + 1
   //* sort and step through making comparisons??????
   return digits;
 };
