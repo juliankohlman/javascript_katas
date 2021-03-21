@@ -10,20 +10,14 @@ doubleton(10) === 12
  */
 
 const doubleton = (num) => {
-  // if num is a doubleton return num += 1
-  // otherwise find the next doubleton
-  // convert num to string 121 => ['1','2','1']
-  // process num array
-  //* iterate over nums array checking for unique nums
-  //? contains exactly TWO distinct digits
-  //* if you reach end of array return joined->then convert to num-> + 1
-  //? 2 pointer technique???
-  let digits = num.toString().split("").sort();
-  //* if digits are unique return num + 1
-  //* sort and step through making comparisons??????
+  //* USE A SET
+  let digits = num.toString().split("");
+  let numSet = new Set(digits);
+  console.log(numSet);
   return digits;
 };
 
 console.log(doubleton(120)); // === 121
-console.log(doubleton(1234)); // === 1311
+console.log(doubleton(121)); // === 122
+console.log(doubleton(1234)); // === 1311 *exactly 2 distinct digits
 console.log(doubleton(10)); // === 12
