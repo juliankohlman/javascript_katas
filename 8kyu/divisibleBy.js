@@ -7,4 +7,11 @@ divisibleBy([1, 2, 3, 4, 5, 6], 2) == [2, 4, 6]
 
 const divisibleBy = (numbers, divisor) => {
   // solution here
+  let res = [];
+  numbers.forEach((num) => {
+    if (num % divisor === 0) res.push(num);
+  });
+  return res;
 };
+
+console.log(divisibleBy([1, 2, 3, 4, 5, 6], 2)); // [2, 4, 6]
