@@ -11,10 +11,10 @@ doubleton(10) === 12
 
 const doubleton = (num) => {
   //* USE A SET
-  let digits = num.toString().split("");
-  let numSet = new Set(digits);
+  //* create a loop continue while size is !== 2
+  let numSet = new Set(num.toString().split(""));
   console.log(numSet);
-  return digits;
+  return numSet.size;
 };
 
 console.log(doubleton(120)); // === 121
