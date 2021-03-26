@@ -14,6 +14,11 @@ const doubleton = (num) => {
   //* create a loop continue while size is !== 2
   let numSet = new Set(num.toString().split(""));
   console.log(numSet);
+  if (numSet.size === 2) return num + 1;
+  while (numSet.size !== 2) {
+    if (numSet.size > 2) {
+    }
+  }
   return numSet.size;
 };
 
