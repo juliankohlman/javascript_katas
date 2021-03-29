@@ -15,7 +15,7 @@ const doubleton = (num) => {
   let numSet = new Set(num.toString().split(""));
   console.log(numSet);
   if (numSet.size === 2) return num + 1;
-
+  // * create a recursive version ????
   while (numSet.size > 2 || numSet.size < 2) {
     if (numSet.size > 2) {
       numSet = new Set((num + 1).toString().split(""));
