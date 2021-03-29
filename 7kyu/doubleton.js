@@ -10,19 +10,14 @@ doubleton(10) === 12
  */
 
 const doubleton = (num) => {
-  //* USE A SET
-  //* create a loop continue while size is !== 2
-  let numSet = new Set(num.toString().split(""));
-  console.log(numSet);
-  if (numSet.size === 2) return num + 1;
-  // * create a recursive version ????
-  while (numSet.size > 2 || numSet.size < 2) {
-    if (numSet.size > 2) {
-      numSet = new Set((num + 1).toString().split(""));
+  let findDoubleton = true;
+  while (findDoubleton) {
+    num++;
+    if (new Set(num.toString().split("")).size === 2) {
+      findDoubleton = false;
     }
   }
-
-  return numSet.size;
+  return num;
 };
 
 console.log(doubleton(120)); // === 121
