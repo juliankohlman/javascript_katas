@@ -10,4 +10,7 @@ filterLongWords("The quick brown fox jumps over the lazy dog", 4) = ['quick', 'b
 
 const filterLongWords = (sentence, n) => {
   // code here
+  return sentence.split(" ").filter((word) => word.length > n);
 };
+
+console.log(filterLongWords("The quick brown fox jumps over the lazy dog", 4));
