@@ -13,9 +13,7 @@ const doubleton = (num) => {
   let findDoubleton = true;
   while (findDoubleton) {
     num++;
-    if (new Set(num.toString().split("")).size === 2) {
-      findDoubleton = false;
-    }
+    if (new Set(num.toString().split("")).size === 2) findDoubleton = false;
   }
   return num;
 };
