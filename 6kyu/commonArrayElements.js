@@ -17,9 +17,9 @@ const regexCommon = (a, b, c) => {
   let matches = group
     .join("")
     .match(pattern)
-    .filter(i => i !== "");
+    .filter((i) => i !== "");
   let res = 0;
-  matches.forEach(i => (res += +i[0]));
+  matches.forEach((i) => (res += +i[0]));
   return res;
 };
 
@@ -28,7 +28,7 @@ function common(a, b, c) {
   // Todo figure out how to handle duplicate common elements
   let arrayCounts = {};
   let allItems = a.concat(b, c);
-  allItems.forEach(element => {
+  allItems.forEach((element) => {
     arrayCounts[element]
       ? (arrayCounts[element] += 1)
       : (arrayCounts[element] = 1);
@@ -40,12 +40,11 @@ function common(a, b, c) {
 common([1, 2, 3], [5, 3, 2], [7, 3, 2]); // 5 because 2 & 3 are common in all 3 arrays
 common([1, 2, 2, 3], [5, 3, 2, 2], [7, 3, 2, 2]); // 7 because 2,2 & 3 are common in the 3 arrays
 
-/*
 const commonElements = (a, b, c) => {
-	let hash = {};
-  let group = a.concat(b,c)
+  let hash = {};
+  let group = a.concat(b, c);
   let res = [];
-  console.log(group)
+  console.log(group);
   for (let i = 0; i <= group.length - 1; i++) {
     if (hash[group[i]]) {
       hash[group[i]] += 1;
@@ -60,4 +59,3 @@ const commonElements = (a, b, c) => {
   }
   return res;
 };
-*/
