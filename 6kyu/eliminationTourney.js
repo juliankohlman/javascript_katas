@@ -17,4 +17,6 @@ tourney(input) === [
 
 const tourney = (array) => {
   // return tourney results
+  // if array.length % 2 === 1
+  // then add last item to beginning of next round
 };
