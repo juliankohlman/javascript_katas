@@ -19,4 +19,6 @@ const tourney = (array) => {
   // return tourney results
   // if array.length % 2 === 1
   // then add last item to beginning of next round
+  //* use pointer left right then iterate the pointers
+  //* add logic for reaching end when odd number
 };
