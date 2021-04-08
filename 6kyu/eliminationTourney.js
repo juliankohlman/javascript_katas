@@ -21,4 +21,10 @@ const tourney = (array) => {
   // then add last item to beginning of next round
   //* use pointer left right then iterate the pointers
   //* add logic for reaching end when odd number
+  let left = 0;
+  let right = 1;
+  let nextRound = [];
+  while (right < array.length - 1) {
+    // * conditions
+  }
 };
