@@ -26,5 +26,9 @@ const tourney = (array) => {
   let nextRound = [];
   while (right < array.length - 1) {
     // * conditions
+    nextRound.push(Math.max(array[left], array[right]));
+    left++;
+    right++;
   }
+  return nextRound;
 };
