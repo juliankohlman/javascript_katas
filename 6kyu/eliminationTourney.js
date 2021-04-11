@@ -24,11 +24,15 @@ const tourney = (array) => {
   let left = 0;
   let right = 1;
   let nextRound = [];
+  if (array.length === 1) return array;
   while (right < array.length - 1) {
     // * conditions
     nextRound.push(Math.max(array[left], array[right]));
     left++;
     right++;
   }
-  return nextRound;
+  //* fix recursion
+  return tourney(nextRound);
 };
+
+console.log(tourney([9, 5, 4, 7, 6, 3, 8, 2]));
