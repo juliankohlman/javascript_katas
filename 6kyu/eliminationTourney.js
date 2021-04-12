@@ -14,8 +14,7 @@ tourney(input) === [
   [9]                        // results of 9 vs 8
 ];
  */
-
-const tourney = (array) => {
+const tourney = (array, nextRound = []) => {
   // return tourney results
   // if array.length % 2 === 1
   // then add last item to beginning of next round
@@ -23,7 +22,7 @@ const tourney = (array) => {
   //* add logic for reaching end when odd number
   let left = 0;
   let right = 1;
-  let nextRound = [];
+  // let nextRound = [];
   if (nextRound.length === 1) return nextRound;
   while (right < array.length - 1) {
     // * conditions
