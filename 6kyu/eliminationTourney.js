@@ -14,24 +14,14 @@ tourney(input) === [
   [9]                        // results of 9 vs 8
 ];
  */
-const tourney = (array, nextRound = []) => {
-  // return tourney results
-  // if array.length % 2 === 1
-  // then add last item to beginning of next round
-  //* use pointer left right then iterate the pointers
-  //* add logic for reaching end when odd number
-  let left = 0;
-  let right = 1;
-  // let nextRound = [];
-  if (nextRound.length === 1) return nextRound;
-  while (right < array.length - 1) {
-    // * conditions
-    nextRound.push(Math.max(array[left], array[right]));
-    left++;
-    right++;
+const tourney = (array) => {
+  let curr = 0;
+  let next = 1;
+  let nextRound = [];
+  // change to loop until array has been exhausted or nextRound length is equal to array length
+  for (let i = 0; i < array.length; i++) {
+    nextRound.push;
   }
-  //* fix recursion
-  return tourney(nextRound);
 };
 
 console.log(tourney([9, 5, 4, 7, 6, 3, 8, 2]));
