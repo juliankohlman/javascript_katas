@@ -18,10 +18,6 @@ const tourney = (array) => {
   let curr = 0;
   let next = 1;
   let nextRound = [];
-  // change to loop until array has been exhausted or nextRound length is equal to array length
-  for (let i = 0; i < array.length; i++) {
-    nextRound.push;
-  }
 };
 
 console.log(tourney([9, 5, 4, 7, 6, 3, 8, 2]));
