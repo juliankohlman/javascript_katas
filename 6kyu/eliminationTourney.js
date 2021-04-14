@@ -17,7 +17,7 @@ tourney(input) === [
 const tourney = (array) => {
   let curr = 0;
   let next = 1;
-  let nextRound = [];
+  let nextRound = [array]; // returning array of arrays representing each round
 };
 
 console.log(tourney([9, 5, 4, 7, 6, 3, 8, 2]));
