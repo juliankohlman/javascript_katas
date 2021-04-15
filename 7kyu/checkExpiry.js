@@ -12,4 +12,15 @@ Your task is to write a function that returns true or false if the expiry date i
 
 const checkExpiryValid = (date) => {
   // solution here
+  // split on space, /, or -
 };
+
+console.log(checkExpiryValid("03/15")); // false, "should not approve dates in the past";
+
+console.log(checkExpiryValid("03/33")); //true, "should approve dates in the future";
+
+console.log(checkExpiryValid("03-15")); //false, "should work with any separator";
+
+console.log(checkExpiryValid("03 / 15")); //false, "should work with any separator";
+
+console.log(checkExpiryValid("03-2015")); //false, "should work with any length of separators";
