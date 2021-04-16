@@ -13,6 +13,7 @@ Your task is to write a function that returns true or false if the expiry date i
 const checkExpiryValid = (date) => {
   // solution here
   // split on space, /, or -
+  // create regex the process from there
 };
 
 console.log(checkExpiryValid("03/15")); // false, "should not approve dates in the past";
