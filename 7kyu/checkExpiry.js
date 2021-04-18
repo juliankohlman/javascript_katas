@@ -16,6 +16,7 @@ const checkExpiryValid = (date) => {
   // create regex the process from there
   const re = /[/-]|[ ]/;
   console.log(date.split(re));
+  // * check year digits against 21?????
 };
 
 console.log(checkExpiryValid("03/15")); // false, "should not approve dates in the past";
