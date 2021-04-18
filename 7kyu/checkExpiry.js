@@ -14,6 +14,8 @@ const checkExpiryValid = (date) => {
   // solution here
   // split on space, /, or -
   // create regex the process from there
+  const re = /[/-]|[ ]/;
+  console.log(date.split(re));
 };
 
 console.log(checkExpiryValid("03/15")); // false, "should not approve dates in the past";
