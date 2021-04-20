@@ -15,7 +15,9 @@ const checkExpiryValid = (date) => {
   // split on space, /, or -
   // create regex the process from there
   const re = /[/-]|[ ]/;
-  console.log(date.split(re));
+  const dateInfo = date.split(re);
+  const yearInfo = dateInfo[dateInfo.length - 1];
+  console.log(yearInfo); // need to process 2 vs 4 digit data coming back
   // * check year digits against 21?????
 };
 
