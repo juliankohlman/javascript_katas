@@ -17,7 +17,14 @@ const checkExpiryValid = (date) => {
   const re = /[/-]|[ ]/;
   const dateInfo = date.split(re);
   const yearInfo = dateInfo[dateInfo.length - 1];
-  console.log(yearInfo); // need to process 2 vs 4 digit data coming back
+  let res;
+  if (yearInfo.length === 4) {
+    res = yearInfo.slice(2);
+  } else {
+    res = yearInfo.slice(0, 2);
+  }
+  console.log(res); // need to process 2 vs 4 digit data coming back
+  return res > 21;
   // * check year digits against 21?????
 };
 
