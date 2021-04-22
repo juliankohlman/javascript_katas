@@ -26,6 +26,7 @@ const checkExpiryValid = (date) => {
   }
   console.log(res); // need to process 2 vs 4 digit data coming back
   // add check for current month to final check
+  // check month and year
   return res > 21;
   // * check year digits against 21?????
 };
