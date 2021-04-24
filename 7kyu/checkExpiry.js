@@ -16,9 +16,13 @@ const checkExpiryValid = (date) => {
   // create regex the process from there
   const re = /[/-]|[ ]/;
   const dateInfo = date.split(re);
-  console.log(dateInfo);
+  // console.log(dateInfo);
   const yearInfo = dateInfo[dateInfo.length - 1];
-  let res;
+  const monthInfo = dateInfo[0];
+  console.log(monthInfo, yearInfo);
+  // console.log(monthInfo);
+  // let month;
+  // let year;
   if (yearInfo.length === 4) {
     res = yearInfo.slice(2);
   } else {
